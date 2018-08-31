@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -20,6 +20,10 @@ lastupdated: "2018-01-23"
 {:shortdesc}
 
 The following updates have been made, arranged according to month of release:
+
+## August 2018
+{: #0818updates}
+* Updated the procedure for configuring custom domains. For more information, see [Custom domains](manage_apis.html#custom_domains).
 
 ## January 2018
 {: #0118updates}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -134,45 +134,41 @@ The response to the request is displayed.
 ## Custom domains
 {: #custom_domains}
 
-Note: The custom domains feature is only available in an organization that is in the US-South region.
-
-In some instances, you might want a custom or "vanity" domain instead of the API gateway's default domain. The API management capability supports fronting APIs with a custom domains as long as the domain is registered in your {{site.data.keyword.Bluemix_notm}} environment.
+In some instances, you might want a custom or "vanity" domain instead of the API gateway's default domain. The API management capability supports fronting APIs with a domain name of your choosing.
 
 Complete the following steps to initially set up the custom domain. If you previously completed the steps to set up the domain, see [Using a custom domain with your APIs](manage_apis.html#custom_domains_bind).
 
+Custom domains are not isolated to a single API, but are scoped to a group of APIs defined by:
+- Originating {{site.data.keyword.Bluemix_notm}} service (for example, {{site.data.keyword.openwhisk_short}})
+- Cloud Foundry space
+
+For example, a custom domain would be scoped to all {{site.data.keyword.openwhisk_short}} APIs created in the "dev" Cloud Foundry space.
+
 ### Setup
 
-To place a custom domain in front of an API, first register your domain with {{site.data.keyword.Bluemix_notm}}. This can be done from the organization management screen:
+To get started, first create a new API in an {{site.data.keyword.Bluemix_notm}} service that supports the integrated API Management feature, or create an API Proxy by using the {{site.data.keyword.Bluemix_notm}} APIs console.
 
-1. From the org selector in the {{site.data.keyword.Bluemix_notm}} header, select **Manage organizations**.
-2. Locate the desired organization in which the domain should be registered and select **View Details**.
-3. Click the **Edit Org** link next to the organization name.
-4. Select the **Domains** tab.
-5. Click **Add Domain** and enter the domain name.
-6. After the domain appears in the list, select **Save** at the top of the screen.
-7. Upload an SSL certificate for this domain. This can be done by selecting the **Upload** icon next to the domain name. Both the public certificate and the corresponding private key are required.  
-	**Notes:**
-	* The API management gateway only supports traffic on the HTTPS protocol, so an SSL certificate must be provided.
-	* {{site.data.keyword.Bluemix_notm}} trial accounts are limited to a single SSL certificate per organization. If additional certificates are required, you must upgrade your account to a paid or subscription tier.
-	* If you plan to use one or more subdomains for API traffic, a wildcard certificate or a certificate containing the desired *Subject Alternative Names* (SANs) is required.
-8. Configure the domain's DNS settings. 
-9. Create a CNAME record for the domain targeting one of the following secure endpoints depending on which region hosts the target API:
-	- **US South:** secure.us-south.bluemix.net.
-	- **United Kingdom:** secure.eu-gb.bluemix.net.
-	- **Frankfurt:** secure.eu-de.bluemix.net.
-	- **Sydney:** secure.au-syd.bluemix.net.
+#### Prepare certificates
+
+In order to register a custom domain, valid TLS certificates must be provided during setup. Use the [Certificate Manager](../services/certificate-manager) service to upload a certificate and private key.
+
+*Note: API invocations are only available by using TLS (port 443). Plain HTTP is not supported.*
 
 ### Using a custom domain with your APIs
 {: #custom_domains_bind}
 
-After the initial setup is complete, bind one or more APIs to the registered domain from the **Definition** section of your API by completing the following steps:
-1. In *API Basics*, select the API Domain menu, and choose a custom domain from the domains that you configured in the previous steps.
+After the initial setup is complete, bind one or more APIs to the registered domain from the **Custom domains** section of the {{site.data.keyword.Bluemix_notm}} APIs console by completing the following steps:
 
-2. Optional: Provide a unique subdomain for this API.
-	**Note**: In order to use a subdomain, the SSL certificate that was uploaded in Step 7 of `Setup` must contain a valid wildcard configuration *or* each subdomain must be listed as a Subject Alternative Name (SAN).
+1. In the list of available targets, locate the service or default domain to which the custom domain should be attached.
+2. In a separate browser window or tab, navigate to your DNS provider's settings page and create a CNAME record for the desired domain. Use the value of the **Default domain / Alias** column in the {{site.data.keyword.Bluemix_notm}} custom domain management page as the CNAME target, then save your DNS settings.
+  
+    *Note: DNS changes can take up to 48 hours to propagate, though changes usually occur more quickly than that.*
+  
+3. On the custom domains page, click the three dots on the row containing the target "default domain", and select **Edit** from the menu.
+4. In the resulting dialog, select the **Assign a custom domain** checkbox.
+5. Specify the desired custom domain in the **Domain name** field (for example, *api.mycompany.com*)
+6. Copy the Cloud Resource Name (CRN) from Certificate Manager for the certificate that was uploaded during initial setup.
+7. Paste the CRN that you copied into the **Certificate CRN** field.
+8. Click **Save**. The specified domain name should appear in the row next to the default domain, indicating that it was successfully applied.
 
-3. Save the API. Domain settings might take several minutes to become active.
-
-For more information, see:
-[Managing Domains](../account/manageorg.html#managedomains) or
-[Creating and Using a Custom Domain](../../manageapps/updapps.html#domain).
+*Note: Before the custom domain is applied, the DNS pointer will be verified by ensuring that the custom domain CNAME points to the default domain associated with the APIs. If DNS setup has not been completed, or the DNS changes from Step 2 haven't propagated yet, an error will appear and the domain settings won't be saved. If this occurs, try again periodically up to 48 hours after changing the DNS settings. If the error persists beyond 48 hours, verify your DNS settings or contact {{site.data.keyword.Bluemix_notm}} support.*
