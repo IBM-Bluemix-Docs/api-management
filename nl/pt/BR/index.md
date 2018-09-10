@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -42,7 +42,7 @@ Se você deseja monetizar o uso de suas APIs, é possível usar o recurso de ana
 * O número de chamadas de API por minuto.
 * As últimas 100 respostas.
 
-O gerenciamento de API usa os serviços de criação de log e de métrica do {{site.data.keyword.Bluemix_notm}} para armazenar e exibir as informações geradas durante chamadas API. Somente um subconjunto dos dados disponíveis é apresentado no console de gerenciamento de API para fins de depuração. Para visualizar dados adicionais e informações de log, consulte [Logs do Kibana ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window}. Deve-se estar conectado à sua conta do {{site.data.keyword.Bluemix_notm}} para que o link seja resolvido corretamente para sua conta. Para obter mais informações sobre os serviços de criação de log do {{site.data.keyword.Bluemix_notm}}, consulte [Monitoramento e criação de log](../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}.
+O gerenciamento de API usa os serviços de criação de log e de métrica do {{site.data.keyword.Bluemix_notm}} para armazenar e exibir as informações geradas durante chamadas API. Somente um subconjunto dos dados disponíveis é apresentado no console de gerenciamento de API para fins de depuração. Para visualizar dados adicionais e informações de log, consulte [Logs do Kibana ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://logging.ng.bluemix.net/app/#/kibana5){: new_window}. Deve-se estar conectado à sua conta do {{site.data.keyword.Bluemix_notm}} para que o link seja resolvido corretamente para sua conta. Para obter mais informações sobre os serviços de criação de log do {{site.data.keyword.Bluemix_notm}}, consulte [Monitoramento e criação de log](../cli/monitoring_logging.html#monitoring_logging){: new_window}.
 
 ## Limitação de taxa por assinatura (chave API)
 {: #rate_limit notoc}
@@ -56,8 +56,7 @@ configurações de API](manage_apis.html#settings_apis).
 {: #oauth notoc}
 
 Para parar o uso indesejado dos dados fornecidos por você, é possível assegurar que apenas usuários com a autenticação correta possam acessar suas APIs. É possível controlar o acesso às suas APIs por meio do padrão de autorização OAuth. OAuth é um
-protocolo de autorização baseado em token que permite que websites ou aplicativos de terceiros acessem
-dados do usuário sem exigir que o usuário compartilhe informações pessoais.
+protocolo de autorização baseado em token que permite que websites ou aplicativos de terceiros acessem dados do usuário sem exigir que o usuário compartilhe informações pessoais.
 
 ## CORS
 {: #cors notoc}

@@ -16,7 +16,7 @@ lastupdated: "2018-01-11"
 # API personali
 {: #manage_api}
 
-Seleziona **API gestite** nel pannello di navigazione della sezione **API** per visualizzare lo stato complessivo delle API da te gestite e quelle che hai gestito in precedenza ma che attualmente non sono esposte. Seleziona **API condivise** per visualizzare tutte le API che sono state condivise con la tua organizzazione {{site.data.keyword.Bluemix_notm}} tramite Gestione delle API oppure tramite il servizio {{site.data.keyword.apiconnect_full}}. **Prezzi** elenca e fornisce i dettagli per le opzioni del servizio {{site.data.keyword.apiconnect_service}} disponibili.
+Seleziona **API gestite** nel pannello di navigazione della sezione **API** per visualizzare lo stato complessivo delle API da te gestite e quelle che hai gestito in precedenza ma che attualmente non sono esposte. Seleziona **API condivise** per visualizzare tutte le API che sono state condivise con la tua organizzazione {{site.data.keyword.Bluemix_notm}} tramite Gestione delle API oppure tramite il servizio {{site.data.keyword.apiconnect_full}}. **Prezzi** elenca e fornisce i dettagli per le opzioni del servizio {{site.data.keyword.apiconnect_short}} disponibili.
 
 Puoi visualizzare tutte le API che gestisci con la gestione delle API insieme utilizzando il dashboard API. 
 

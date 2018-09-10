@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -20,6 +20,10 @@ Das {{site.data.keyword.Bluemix_notm}}-API-Management wurde aktualisiert, um Fea
 {:shortdesc}
 
 Die nachfolgend aufgeführten Aktualisierungen wurden vorgenommen. Die Reihenfolge entspricht dem jeweiligen Monat der Bereitstellung:
+
+## August 2018
+{: #0818updates}
+* Die Prozedur zur Konfiguration angepasster Domänen wurde aktualisiert. Weitere Informationen hierzu finden Sie in [Angepasste Domänen](manage_apis.html#custom_domains).
 
 ## Januar 2018
 {: #0118updates}

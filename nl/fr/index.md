@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -42,7 +42,7 @@ Vous pouvez visualiser les statistiques suivantes sur vos API :
 * le nombre d'appels API par minute,
 * les 100 dernières réponses.
 
-La gestion des API utilise les services {{site.data.keyword.Bluemix_notm}} de consignation et de métrique pour stocker et afficher les informations générées lors des appels d'API. Seul un sous-ensemble des données disponibles est présenté dans la console de gestion des API à des fins de débogage. Pour afficher davantage de données et les informations de journal, consultez les [journaux Kibana ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window}. Vous devez vous connecter à votre compte {{site.data.keyword.Bluemix_notm}} pour que ce lien se résolve correctement vers votre compte. Pour plus d'informations sur les services de consignation {{site.data.keyword.Bluemix_notm}}, voir [Surveillance et journalisation](../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}.
+La gestion des API utilise les services {{site.data.keyword.Bluemix_notm}} de consignation et de métrique pour stocker et afficher les informations générées lors des appels d'API. Seul un sous-ensemble des données disponibles est présenté dans la console de gestion des API à des fins de débogage. Pour afficher davantage de données et les informations de journal, consultez les [journaux Kibana ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://logging.ng.bluemix.net/app/#/kibana5){: new_window}. Vous devez vous connecter à votre compte {{site.data.keyword.Bluemix_notm}} pour que ce lien se résolve correctement vers votre compte. Pour plus d'informations sur les services de consignation {{site.data.keyword.Bluemix_notm}}, voir [Surveillance et journalisation](../cli/monitoring_logging.html#monitoring_logging){: new_window}.
 
 ## Limite par abonnement (clé d'API)
 {: #rate_limit notoc}

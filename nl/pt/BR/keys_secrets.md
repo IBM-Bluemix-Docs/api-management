@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017,2018
+lastupdated: "2018-01-05"
 
 ---
 
@@ -23,7 +23,7 @@ Quando suas APIs são gerenciadas pelo gerenciamento de API, é possível usar c
 
 Para incluir uma chave em sua API, conclua as etapas a seguir:
 
-1. Abra o aplicativo Cloud Foundry ou a API OpenWhisk, se não estiver aberto ainda.
+1. Abra a API do {{site.data.keyword.openwhisk_short}} ou do aplicativo Cloud Foundry, caso ainda não esteja aberta.
 
 2. Selecione *API Management* na navegação.
 
@@ -40,8 +40,8 @@ deve ser exposta para que você possa designar chaves.
 *Compartilhando dentro da organização {{site.data.keyword.Bluemix_notm}}*. Uma
 chave e um segredo são automaticamente criados e inseridos nos campos corretos. Não é
 possível atualizar a chave ou o segredo para esse tipo de chave. 
-  2. Insira um nome para sua chave e segredo para ajudar a identificá-lo. Por
-exemplo, o nome do cliente que vai usá-lo.
+  2. Insira um nome para sua chave e segredo para ajudar a identificá-lo. Por exemplo, o
+nome do cliente que vai usá-lo.
   3. Selecione **Salvar** para salvar a nova chave.
   4. Você pode repetir as etapas de *a* até *c* para chaves adicionais, se necessário. É possível ter no máximo 5 chaves nesta seção por API.
 
@@ -58,9 +58,7 @@ segredo e selecione **Configurar segredo da API**.
   4. Selecione **Salvar** para salvar a nova chave.
   5. Você pode repetir as etapas de *a* até *d* para chaves
 adicionais, se necessário. É possível ter no máximo 5 chaves nesta seção por API.
-Suas
-chaves são listadas para a API quando a guia Compartilhando chaves do & é
-selecionada.
+Suas chaves são listadas para a API quando a guia *Compartilhamento e chaves* é selecionada.
 
 ## Especificando uma chave e um segredo em uma chamada API
 {: #spec_key_secret}
@@ -87,7 +85,7 @@ API crie sua própria API e não precise mais da sua. Para assegurar que nenhum 
 clientes ainda esteja usando a API, você pode excluir a chave. Para excluir uma chave do
 serviço, conclua as etapas a seguir:
 
-1. Abra o aplicativo Cloud Foundry ou a API OpenWhisk, se não estiver aberto ainda.
+1. Abra a API do {{site.data.keyword.openwhisk_short}} ou do aplicativo Cloud Foundry, caso ainda não esteja aberta.
 
 2. Selecione *Gerenciamento de API* na navegação.
 

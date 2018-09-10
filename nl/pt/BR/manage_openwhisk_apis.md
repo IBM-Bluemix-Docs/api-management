@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -36,7 +36,7 @@ Para criar uma API do {{site.data.keyword.openwhisk_short}}, conclua as etapas a
 		* PATCH
 		* POST
 		* COLOCAR
-	* Pacote que contém ação - os pacotes que já estão disponíveis em sua organização que podem ter a ação que deseja usar para essa API. Consulte [Usando e criando pacotes de funções Cloud](../openwhisk/openwhisk_packages.html) para obter informações adicionais sobre esse campo.
+	* Pacote que contém ação - os pacotes que já estão disponíveis em sua organização que podem ter a ação que deseja usar para essa API. Consulte [Usando e criando pacotes do Cloud Functions](../openwhisk/openwhisk_packages.html) para obter informações adicionais sobre esse campo.
 	* Ações - **ações que estão disponíveis no {{site.data.keyword.Bluemix_notm}}** são a única opção que está disponível.
 	* Tipo de conteúdo de resposta - identifica o formato no qual a API retorna as informações. Você pode selecionar os seguintes formatos:
 	    * application/json - esse é o formato padrão e é o mais usado.

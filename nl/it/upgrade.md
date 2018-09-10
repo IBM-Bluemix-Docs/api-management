@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -41,7 +41,7 @@ Se decidi di eseguire l'upgrade a {{site.data.keyword.apiconnect_short}}, dovrai
 
 4. Seleziona **Definizione** nella navigazione.
 
-5. Seleziona **File di definizione API** > **Esporta in API Connect** > **Esporta API** nella sezione *File di definizione API*. Se già disponi di un servizio {{site.data.keyword.apiconnect_short}} esistente, viene migrata automaticamente l'API al servizio esistente. Se non disponi ancora di un servizio {{site.data.keyword.apiconnect_short}} configurato, viene automaticamente aggiunto con un piano Lite gratuito e viene migrata l'API. Se la tua istanza non viene fornita, completa la procedura in [Migrazione manuale delle API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) per migrarla manualmente al nuovo servizio. 
+5. Seleziona **File di definizione API** > **Apri in API Connect** > **Continua** nella sezione *File di definizione API*. Se già disponi di un servizio {{site.data.keyword.apiconnect_short}} esistente, viene migrata automaticamente l'API al servizio esistente. Se non disponi ancora di un servizio {{site.data.keyword.apiconnect_short}} configurato, viene automaticamente aggiunto con un piano Lite gratuito e viene migrata l'API. Se la tua istanza non viene fornita, completa la procedura in [Migrazione manuale delle API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) per migrarla manualmente al nuovo servizio. 
 
 6. Prima di chiudere la schermata dell'API originale, disabilita lo slider per **Esponi API gestita**. Questo evita che qualcuno utilizzi l'endpoint della vecchia versione.
 
@@ -53,7 +53,7 @@ Se decidi di eseguire l'upgrade a {{site.data.keyword.apiconnect_short}}, dovrai
 
 3. Seleziona **Definizione** nella navigazione.
 
-4. Seleziona **File di definizione API** > **Esporta in API Connect** > **Esporta API**. Se già disponi di un servizio {{site.data.keyword.apiconnect_short}} esistente, viene migrata automaticamente l'API al servizio esistente. Se non disponi ancora di un servizio {{site.data.keyword.apiconnect_short}} configurato, viene automaticamente aggiunto con un piano Lite gratuito e viene migrata l'API. Se la tua istanza non viene fornita, completa la procedura in [Migrazione manuale delle API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) per migrarla manualmente al nuovo servizio.
+4. Seleziona **File di definizione API** > **Apri in API Connect** > **Continua**. Se già disponi di un servizio {{site.data.keyword.apiconnect_short}} esistente, viene migrata automaticamente l'API al servizio esistente. Se non disponi ancora di un servizio {{site.data.keyword.apiconnect_short}} configurato, viene automaticamente aggiunto con un piano Lite gratuito e viene migrata l'API. Se la tua istanza non viene fornita, completa la procedura in [Migrazione manuale delle API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) per migrarla manualmente al nuovo servizio.
    
 5. Dopo aver migrato il contenuto all'istanza {{site.data.keyword.apiconnect_short}}, seleziona il link fornito per accedere alla versione migrata.
     **Importante:** per evitare problemi con l'esecuzione di più istanze dell'API, assicurati di disabilitare lo slider *Gestisci l'API* nella versione originale dell'API.

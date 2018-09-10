@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -20,6 +20,10 @@ lastupdated: "2018-01-23"
 {:shortdesc}
 
 以下の更新が行われました。リリースの月ごとに記載してあります。
+
+## 2018 年 8 月
+{: #0818updates}
+* カスタム・ドメインの構成の手順を更新しました。詳しくは、『[カスタム・ドメイン](manage_apis.html#custom_domains)』を参照してください。
 
 ## 2018 年 1 月
 {: #0118updates}

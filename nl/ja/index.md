@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -42,7 +42,7 @@ API について以下の統計を表示できます。
 * 1 分当たりの API 呼び出しの回数。
 * 最後の 100 回の応答。
 
-API Management では、{{site.data.keyword.Bluemix_notm}} のロギング・サービスおよびメトリック・サービスを使用して、API 呼び出し時に生成された情報を保管および表示します。 使用可能なデータのサブセットのみが、デバッグの目的で API Management コンソールに表示されます。 さらにデータおよびログ情報を表示するには、[『Kibana logs』![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window}を参照してください。 このリンクに、ご使用のアカウントで正しくアクセスするには、{{site.data.keyword.Bluemix_notm}} アカウントにログインしている必要があります。 {{site.data.keyword.Bluemix_notm}} ロギング・サービスについて詳しくは、『[モニターとロギング](../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}』を参照してください。
+API Management では、{{site.data.keyword.Bluemix_notm}} のロギング・サービスおよびメトリック・サービスを使用して、API 呼び出し時に生成された情報を保管および表示します。 使用可能なデータのサブセットのみが、デバッグの目的で API Management コンソールに表示されます。 さらにデータおよびログ情報を表示するには、[『Kibana logs』![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://logging.ng.bluemix.net/app/#/kibana5){: new_window}を参照してください。 このリンクに、ご使用のアカウントで正しくアクセスするには、{{site.data.keyword.Bluemix_notm}} アカウントにログインしている必要があります。 {{site.data.keyword.Bluemix_notm}} ロギング・サービスについて詳しくは、『[モニターとロギング](../cli/monitoring_logging.html#monitoring_logging){: new_window}』を参照してください。
 
 ## サブスクリプション (API キー) ごとのレート制限
 {: #rate_limit notoc}

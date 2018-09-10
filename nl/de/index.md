@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -42,7 +42,7 @@ Die folgenden Statistiken zu APIs können angezeigt werden:
 * Die Anzahl der API-Aufrufe pro Minute.
 * Die letzten 100 Antworten.
 
-API-Management verwendet die {{site.data.keyword.Bluemix_notm}} Protokollierungs- und Metrikenservices, um Informationen, die während der API-Aufrufe generiert werden, zu speichern und anzuzeigen. In der API-Managementkonsole für Fehlerbehebungszwecke wird nur eine Untergruppe der verfügbaren Daten dargestellt. Zum Anzeigen zusätzlicher Daten und Protokollinformationen, ziehen Sie den Abschnitt [Kibana-Protokolle ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window} zu Rate. Sie müssen an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto angemeldet sein, damit sich der Link zu Ihrem Konto korrekt auflöst. Weitere Informationen zu den {{site.data.keyword.Bluemix_notm}}-Protokollierungsservices finden Sie im Abschnitt [Überwachung und Protokollierung](../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}.
+API-Management verwendet die {{site.data.keyword.Bluemix_notm}} Protokollierungs- und Metrikenservices, um Informationen, die während der API-Aufrufe generiert werden, zu speichern und anzuzeigen. In der API-Managementkonsole für Fehlerbehebungszwecke wird nur eine Untergruppe der verfügbaren Daten dargestellt. Zum Anzeigen zusätzlicher Daten und Protokollinformationen, ziehen Sie den Abschnitt [Kibana-Protokolle ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://logging.ng.bluemix.net/app/#/kibana5){: new_window} zu Rate. Sie müssen an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto angemeldet sein, damit sich der Link zu Ihrem Konto korrekt auflöst. Weitere Informationen zu den {{site.data.keyword.Bluemix_notm}}-Protokollierungsservices finden Sie im Abschnitt [Überwachung und Protokollierung](../cli/monitoring_logging.html#monitoring_logging){: new_window}.
 
 ## Ratenbegrenzung durch Subskription (API-Schlüssel)
 {: #rate_limit notoc}
@@ -57,7 +57,7 @@ Um eine unzulässige Nutzung der bereitgestellten Daten zu verhindern, können S
 ## CORS
 {: #cors notoc}
 
-CORS ermöglicht den in einer Webseite eingebetteten Scripts domänenübergreifende API-Aufrufe. Der Vorteil für den API-Benutzer besteht darin, dass die API die Informationen aus einer anderen Domäne abrufen kann, wenn diese von der API aufgerufen wird. Ohne die Aktivierung von CORS ist das Abrufen von Inhalten auf die Domäne der ursprünglichen Anforderung begrenzt. Weitere Informationen zu CORS sowie zur Implementierung finden Sie in [Cross-Origin Resource Sharing (CORS) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS){: new_window}.
+CORS ermöglicht den in einer Webseite eingebetteten Scripts domänenübergreifende API-Aufrufe. Der Vorteil für den API-Benutzer besteht darin, dass die API die Informationen aus einer anderen Domäne abrufen kann, wenn diese von der API aufgerufen wird. Ohne die Aktivierung von CORS ist das Abrufen von Inhalten auf die Domäne der ursprünglichen Anforderung begrenzt. Weitere Informationen zu CORS sowie zur Implementierung finden Sie in [Cross-Origin Resource Sharing (CORS) ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS){: new_window}.
 
 ## Zusätzliche Optionen für das API-Management
 {: #add_mgt_options notoc}

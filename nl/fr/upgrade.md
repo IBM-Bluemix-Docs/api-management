@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -41,7 +41,7 @@ Si vous décidez d'effectuer une mise à niveau vers {{site.data.keyword.apiconn
 
 4. Sélectionnez **Définition** dans la navigation.
 
-5. Sélectionnez **Fichier de définition de l'API** > **Exporter vers API Connect** > **Exporter l'API** dans la section *Fichier de définition de l'API*. Si vous disposez déjà d'un service {{site.data.keyword.apiconnect_short}} existant, l'API est migrée automatiquement vers ce service. Si vous n'avez pas encore de service {{site.data.keyword.apiconnect_short}} configuré, le service est automatiquement ajouté avec un plan limité gratuit et l'API est migrée. Si la mise à disposition de votre instance échoue, suivez la procédure décrite dans [Migration manuelle des API vers {{site.data.keyword.apiconnect_short}}](#man_migrate_api) pour procéder à une migration manuelle vers le nouveau service. 
+5. Sélectionnez **Fichier de définition de l'API** > **Ouvrir dans API Connect** > **Continuer** dans la section *Fichier de définition de l'API*. Si vous disposez déjà d'un service {{site.data.keyword.apiconnect_short}} existant, l'API est migrée automatiquement vers ce service. Si vous n'avez pas encore de service {{site.data.keyword.apiconnect_short}} configuré, le service est automatiquement ajouté avec un plan limité gratuit et l'API est migrée. Si la mise à disposition de votre instance échoue, suivez la procédure décrite dans [Migration manuelle des API vers {{site.data.keyword.apiconnect_short}}](#man_migrate_api) pour procéder à une migration manuelle vers le nouveau service. 
 
 6. Avant de fermer l'écran de l'API d'origine, désactivez le curseur pour **Exposer l'API gérée**, afin d'empêcher quiconque d'agir sur le noeud final de l'ancienne version.
 
@@ -53,7 +53,7 @@ Si vous décidez d'effectuer une mise à niveau vers {{site.data.keyword.apiconn
 
 3. Sélectionnez **Définition** dans la navigation.
 
-4. Sélectionnez **Fichier de définition de l'API** > **Exporter vers API Connect** > **Exporter l'API**. Si vous disposez déjà d'un service {{site.data.keyword.apiconnect_short}} existant, l'API est migrée automatiquement vers ce service. Si vous n'avez pas encore de service {{site.data.keyword.apiconnect_short}} configuré, le service est automatiquement ajouté avec un plan limité gratuit et l'API est migrée. Si la mise à disposition de votre instance échoue, suivez la procédure décrite dans [Migration manuelle des API vers {{site.data.keyword.apiconnect_short}}](#man_migrate_api) pour procéder à une migration manuelle vers le nouveau service.
+4. Sélectionnez **Fichier de définition de l'API** > **Ouvrir dans API Connect** > **Continuer**. Si vous disposez déjà d'un service {{site.data.keyword.apiconnect_short}} existant, l'API est migrée automatiquement vers ce service. Si vous n'avez pas encore de service {{site.data.keyword.apiconnect_short}} configuré, le service est automatiquement ajouté avec un plan limité gratuit et l'API est migrée. Si la mise à disposition de votre instance échoue, suivez la procédure décrite dans [Migration manuelle des API vers {{site.data.keyword.apiconnect_short}}](#man_migrate_api) pour procéder à une migration manuelle vers le nouveau service.
    
 5. Une fois le contenu migré vers l'instance {{site.data.keyword.apiconnect_short}}, sélectionnez le lien qui est fourni pour accéder à la version migrée.
     **Important :** pour empêcher les problèmes générés par l'exécution simultanée de plusieurs instances de l'API, prenez soin de désactiver le curseur de gestion de l'API dans la version d'origine de l'API.

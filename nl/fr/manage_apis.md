@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-28"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -134,41 +134,41 @@ La réponse à la question s'affiche.
 ## Domaines personnalisés
 {: #custom_domains}
 
-Dans certains cas, vous pouvez vouloir disposer d'un domaine personnalisé au lieu du domaine par défaut de la passerelle d'API. La fonctionnalité de gestion des API prend en charge la possibilité d'associer ces dernières à des domaines personnalisés tant que ces domaines sont enregistrés dans votre environnement {{site.data.keyword.Bluemix_notm}}.
+Dans certains cas, vous pouvez vouloir disposer d'un domaine personnalisé au lieu du domaine par défaut de la passerelle d'API. La fonctionnalité de gestion des API prend en charge la possibilité d'associer ces dernières à un nom de domaine de votre choix.
 
 Procédez comme suit pour procéder à la configuration initiale du domaine personnalisé. Si vous avez déjà configuré le domaine, voir [Utilisation d'un domaine personnalisé avec votre API](manage_apis.html#custom_domains_bind).
 
+Les domaines personnalisés ne sont pas isolés sur une API unique, mais sont étendus à un groupe d'API défini par 
+- Le service {{site.data.keyword.Bluemix_notm}} d'origine (par exemple, {{site.data.keyword.openwhisk_short}})
+- L'espace Cloud Foundry
+
+Par exemple, un domaine personnalisé sera étendu à toutes les API {{site.data.keyword.openwhisk_short}} créées dans l'espace Cloud Foundry "dev".
+
 ### Configuration
 
-Pour placer un domaine personnalisé devant une API, enregistrez d'abord votre domaine avec {{site.data.keyword.Bluemix_notm}}, opération qui peut être effectuée dans l'écran de gestion de l'organisation :
+Pour commencer, créez d'abord une nouvelle API dans un service {{site.data.keyword.Bluemix_notm}} qui prend en charge la fonctionnalité API Management intégrée, ou créez un proxy d'API à l'aide de la console des API {{site.data.keyword.Bluemix_notm}}.
 
-1. Depuis le sélecteur d'organisation de l'en-tête {{site.data.keyword.Bluemix_notm}}, sélectionnez **Gérer les organisations**.
-2. Localisez l'organisation dans laquelle le domaine doit être enregistré et sélectionnez **Afficher les détails**.
-3. Cliquez sur le lien **Editer l'organisation** en regard du noeud de l'organisation.
-4. Sélectionnez l'onglet **Domaines**.
-5. Cliquez sur **Ajouter un domaine** et entrez le nom du domaine.
-6. Quand le domaine s'affiche dans la liste, sélectionnez **Sauvegarder** en haut de l'écran.
-7. Téléchargez un certificat SSL pour ce domaine. Pour ce faire, sélectionnez l'icône **Télécharger** en regard du nom de domaine. Le certificat public et la clé privée correspondant sont tous les deux requis.  
-	**Remarques :**
-	* La passerelle API Management ne prenant en charge le trafic que sur le protocole HTTPS, un certificat SSL doit être fourni.
-	* Les comptes d'essai {{site.data.keyword.Bluemix_notm}} sont limités à un seul certificat SSL par organisation. Si des certificats supplémentaires sont requis, vous devez mettre à niveau votre compte en passant à un abonnement payant.
-	* Si vous prévoyez d'utiliser un ou plusieurs sous-domaines pour le trafic des API, un certificat générique ou un certificat contenant les noms SAN (*Subject Alternative Name*) voulus est requis.
-8. Configurez les paramètres DNS du domaine. 
-9. Créez un enregistrement CNAME pour le domaine ciblant l'un des noeuds finaux sécurisés ci-après, selon la région qui héberge l'API cible :
-	- **Sud des Etats-Unis :** secure.us-south.bluemix.net.
-	- **Royaume-Uni :** secure.eu-gb.bluemix.net.
-	- **Francfort :** secure.eu-de.bluemix.net.
-	- **Sydney :** secure.au-syd.bluemix.net.
+#### Préparation des certificats
+
+Pour enregistrer un domaine personnalisé, vous devez fournir des certificats TLS valides lors de la configuration. Utilisez le service [Certificate Manager](../services/certificate-manager) pour télécharger un certificat et une clé privée.
+
+*Remarque : Les appels d'API sont uniquement disponibles via TLS (port 443). Le protocole HTTP simple n'est pas pris en charge.*
 
 ### Utilisation d'un domaine personnalisé avec votre API
 {: #custom_domains_bind}
 
-Une fois la configuration initiale terminée, liez une ou plusieurs API au domaine enregistré, depuis la section **Définition** de votre API, en procédant comme suit :
-1. Dans *Opérations de base pour l'API*, sélectionnez le menu relatif au domaine de l'API et choisissez un domaine personnalisé parmi les domaines que vous avez configurés précédemment.
+Une fois la configuration initiale terminée, liez une ou plusieurs API au domaine enregistré à partir de la section **Domaines personnalisés** de la console des API {{site.data.keyword.Bluemix_notm}} en procédant comme suit :
 
-2. Facultatif : fournissez un sous-domaine unique pour cette API.
-	**Remarque** : pour pouvoir utiliser un sous-domaine, le certificat SSL qui a été téléchargé à l'étape 7 de la procédure `Configuration` doit contenir une configuration générique valide, *ou bien* chaque sous-domaine doit être répertorié en tant que SAN (Subject Alternative Name).
+1. Dans la liste des cibles disponibles, localisez le service ou le domaine par défaut auquel le domaine personnalisé doit être attaché.
+2. Dans une fenêtre de navigateur ou un onglet distinct, accédez à la page des paramètres de votre fournisseur DNS et créez un enregistrement CNAME pour le domaine souhaité. Utilisez la valeur de la colonne **Domaine par défaut / Alias** dans la page de gestion des domaines personnalisés {{site.data.keyword.Bluemix_notm}} comme cible CNAME, puis sauvegardez vos paramètres DNS.
+  
+    *Remarque : La propagation des modifications DNS peut prendre jusqu'à 48 heures, mais elle est généralement plus rapide.*
+  
+3. Sur la page des domaines personnalisés, cliquez sur les points de suspension de la ligne contenant le "domaine par défaut" cible, puis sélectionnez **Editer** dans le menu.
+4. Dans la boîte de dialogue qui s'affiche, cochez la case **Affecter un domaine personnalisé**.
+5. Indiquez le domaine personnalisé souhaité dans la zone **Nom du domaine** (par exemple, *api.mycompany.com*).
+6. Copiez le nom de ressource de cloud (CRN) depuis Certificate Manager pour le certificat téléchargé lors de la configuration initiale.
+7. Collez le CRN qui vous avez copié dans la zone **CRN du certificat**.
+8. Cliquez sur **Sauvegarder**. Le nom de domaine spécifié doit s'afficher sur la ligne en regard du domaine par défaut, indiquant qu'il a été correctement appliqué.
 
-3. Sauvegardez l'API. L'activation des paramètres de domaine peut prendre quelques minutes.
-
-Pour plus d'informations, voir [Gestion des domaines](../admin/manageorg.html#managedomains) ou [Création et utilisation d'un domaine personnalisé](../manageapps/updapps.html#domain).
+*Remarque : Avant d'appliquer le domaine personnalisé, le pointeur DNS est vérifié en s'assurant que le domaine personnalisé CNAME pointe vers le domaine par défaut associé aux API. Si la configuration DNS n'est pas terminée ou que les modifications DNS de l'Etape 2 n'ont pas encore été propagées, une erreur s'affiche et les paramètres du domaine ne sont pas sauvegardés. Dans ce cas, réessayez régulièrement pendant 48 heures après la modification des paramètres DNS. Si l'erreur persiste au-delà de 48 heures, vérifiez vos paramètres DNS ou contactez le support {{site.data.keyword.Bluemix_notm}}.*

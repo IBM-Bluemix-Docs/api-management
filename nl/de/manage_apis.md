@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-28"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -134,42 +134,41 @@ Die Antwort auf die Anforderung wird angezeigt.
 ## Angepasste Domänen
 {: #custom_domains}
 
-In bestimmten Instanzen kann der Einsatz einer angepassten Domäne (sog. Vanity Domain) anstelle der Standarddomäne des API-Gateways sinnvoll sein. Die API-Managementfunktionalität unterstützt APIs, denen eine angepasste Domäne vorgeschaltet ist, solange die Domäne in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung registriert wurde.
+In bestimmten Instanzen kann der Einsatz einer angepassten Domäne (sog. Vanity Domain) anstelle der Standarddomäne des API-Gateways sinnvoll sein. Die API-Managementfunktionalität unterstützt APIs, denen ein von Ihnen ausgewählter Domänenname vorangestellt ist.
 
 Führen Sie die folgenden Schritte aus, um eine angepasste Domäne einzurichten. Wenn Sie die Schritte zur Einrichtung der Domäne bereits ausgeführt haben, dann sollten Sie die Informationen im Abschnitt [Angepasste Domäne mit APIs verwenden](manage_apis.html#custom_domains_bind) lesen.
 
+Angepasste Domänen sind nicht für eine einzelne API isoliert, sondern beziehen sich auf eine Gruppe von APIs, die durch die folgenden Faktoren definiert sind:
+- Ursprünglicher {{site.data.keyword.Bluemix_notm}}-Service (z. B. {{site.data.keyword.openwhisk_short}})
+- Cloud Foundry-Bereich
+
+So kann sich eine angepasste Domäne zum Beispiel auf alle im Cloud Foundry-Bereich "dev" erstellten {{site.data.keyword.openwhisk_short}}-APIs beziehen.
+
 ### Konfiguration
 
-Um einer API eine angepasste Domäne vorzuschalten, müssen Sie zuerst die Domäne in {{site.data.keyword.Bluemix_notm}} registrieren. Dieser Vorgang kann über die Managementanzeige der Organisation ausgeführt werden:
+Erstellen Sie als ersten Schritt eine neue API in einem {{site.data.keyword.Bluemix_notm}}-Service, der das integrierte API Management-Feature unterstützt, oder erstellen Sie einen API-Proxy mithilfe der {{site.data.keyword.Bluemix_notm}}-API-Konsole.
 
-1. Wählen Sie im Organisationsselektor des {{site.data.keyword.Bluemix_notm}}-Headers die Option **Organisationen verwalten** aus.
-2. Suchen Sie die gewünschte Organisation, in der die Domäne registriert werden soll, und wählen Sie dann die Option **Details anzeigen** aus.
-3. Klicken Sie auf den Link **Organisation bearbeiten** neben dem Organisationsnamen.
-4. Wählen Sie die Registerkarte **Domänen** aus.
-5. Klicken Sie auf **Domäne hinzufügen** und geben Sie dann den Domänennamen ein.
-6. Nachdem die Domäne in der Liste angezeigt wird, wählen Sie oben in der Anzeige **Speichern** aus.
-7. Laden Sie ein SSL-Zertifikat für diese Domäne hoch. Hierzu können Sie das Symbol **Hochladen** neben dem Domänennamen auswählen. Sowohl das öffentliche Zertifikat als auch der entsprechende private Schlüssel sind erforderlich.  
-	**Hinweis:**
-	* Das API-Management-Gateway unterstützt Datenverkehr nur über das HTTPS-Protokoll, sodass ein SSL-Zertifikat angegeben werden muss.
-	* {{site.data.keyword.Bluemix_notm}}-Testkonten unterliegen einer Beschränkung auf nur ein SSL-Zertifikat pro Organisation. Wenn zusätzliche Zertifikate erforderlich sind, dann müssen Sie für Ihr Konto ein Upgrade auf eine kostenpflichtige Preisstufe oder eine Abonnementpreisstufe durchführen.
-	* Wenn Sie die Verwendung einzelner oder mehrerer Unterdomänen für den API-Datenverkehr planen, dann ist ein Platzhalterzertifikat oder ein Zertifikat erforderlich, das die gewünschten SANs (*Subject Alternative Names*) enthält.
-8. Konfigurieren Sie die DNS-Einstellungen der Domäne. 
-9. Erstellen Sie einen CNAME-Datensatz für die Domäne und wählen Sie dazu einen der folgenden sicheren Endpunkte als Ziel aus. Der ausgewählte Endpunkt ist von der Region abhängig, in der die Ziel-API gehostet wird:
-	- **Vereinigte Staaten (Süden):** secure.us-south.bluemix.net.
-	- **Großbritannien:** secure.eu-gb.bluemix.net.
-	- **Frankfurt:** secure.eu-de.bluemix.net.
-	- **Sydney:** secure.au-syd.bluemix.net.
+#### Zertifikate vorbereiten
+
+Für die Registrierung einer angepassten Domäne müssen während der Konfiguration gültige TLS-Zertifikate angegeben werden. Verwenden Sie den [Certificate Manager](../services/certificate-manager)-Service zum Hochladen eines Zertifikats und eines privaten Schlüssels.
+
+*Hinweis: API-Aufrufe sind nur bei der Verwendung von TLS möglich (Port 443). Einfaches HTTP wird nicht unterstützt.*
 
 ### Angepasste Domäne mit APIs verwenden
 {: #custom_domains_bind}
 
-Nach Abschluss der Ersteinrichtung müssen Sie mindestens eine API über den Abschnitt **Definition** Ihrer API an die registrierte Domäne binden, indem Sie die folgenden Schritte ausführen:
-1. Wählen Sie in *API-Basisinformationen* das Menü für die API-Domäne und anschließend eine angepasste Domäne aus den Domänen aus, die Sie in den vorherigen Schritten konfiguriert haben.
+Erstellen Sie nach dem Abschluss der Erstkonfiguration für eine oder mehrere APIs eine Bindung an die registrierte Domäne, indem Sie im Abschnitt **Angepasste Domänen** der {{site.data.keyword.Bluemix_notm}}-API-Konsole die folgenden Schritte ausführen:
 
-2. Optional: Geben Sie eine eindeutige Unterdomäne für diese API an.
-	**Hinweis:** Zur Verwendung der Unterdomäne muss das in Schritt 7 der `Konfiguration` hochgeladene SSL-Zertifikat eine gültige Platzhalterkonfiguration enthalten *oder* jede Unterdomäne muss als SAN (Subject Alternative Name) aufgelistet werden.
+1. Suchen Sie in der Liste der verfügbaren Ziele den Service oder die Standarddomäne, dem bzw. der die angepasste Domäne zugeordnet werden soll.
+2. Navigieren Sie in einem separaten Browserfenster oder auf einer separaten Registerkarte zur Einstellungsseite Ihres DNS-Providers und erstellen Sie einen NAME-Eintrag für die gewünschte Domäne. Verwenden Sie den Wert der Spalte **Standarddomäne / Alias** auf der {{site.data.keyword.Bluemix_notm}}-Seite für die Verwaltung angepasster Domänen als CNAME-Ziel und speichern Sie dann die DNS-Einstellungen.
+  
+    *Hinweis: Die Weiterleitung von DNS-Änderungen kann bis zu 48 Stunden in Anspruch nehmen; normalerweise werden die Änderungen jedoch schneller umgesetzt.*
+  
+3. Klicken Sie auf der Seite mit den angepassten Domänen auf die drei Punkte in der Zeile mit der als Ziel ausgewählten "Standarddomäne" und wählen Sie **Bearbeiten** im Menü aus.
+4. Wählen Sie im daraufhin angezeigten Dialog das Kontrollkästchen **Angepasste Domäne zuweisen** aus.
+5. Geben Sie die gewünschte angepasste Domäne im Feld **Domänenname** an (z. B. *api.mycompany.com*).
+6. Kopieren Sie den Cloudressourcennamen (CRN) für das bei der Erstkonfiguration hochgeladene Zertifikat aus Certificate Manager.
+7. Fügen Sie den kopierten CRN in das Feld **Zertifikats-CRN** ein.
+8. Klicken Sie auf **Speichern**. Der angegebene Domänenname sollte in der Zeile neben der Standarddomäne angezeigt werden; hierdurch wird angegeben, dass der Name erfolgreich angewendet wurde.
 
-3. Speichern Sie die API. Die Aktivierung der Domäneneinstellungen kann mehrere Minuten in Anspruch nehmen.
-
-Weitere Informationen enthalten die folgenden Abschnitte:
-[Domänen verwalten](../admin/manageorg.html#managedomains) und [Angepasste Domäne erstellen und verwenden](../manageapps/updapps.html#domain).
+*Hinweis: Vor der Anwendung der angepassten Domäne wird der DNS-Verweis verifiziert, indem sichergestellt wird, dass der CNAME der angepassten Domäne auf die Standarddomäne verweist, die den APIs zugeordnet ist. Falls die DNS-Konfiguration noch nicht abgeschlossen ist oder falls die in Schritt 2 vorgenommenen DNS-Änderungen noch nicht weitergeleitet wurden, wird ein Fehler angezeigt und die Domäneneinstellungen werden nicht gespeichert. Ist dies der Fall, wiederholen Sie den Vorgang laufend für einen Zeitraum von bis zu 48 Stunden nach dem Ändern der DNS-Einstellungen. Tritt der Fehler auch nach 48 Stunden weiterhin auf, überprüfen Sie Ihre DNS-Einstellungen oder wenden Sie sich an den {{site.data.keyword.Bluemix_notm}} Support.*

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-28"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -135,8 +135,7 @@ determinar qual chave gerou o link.
   
 O link da documentação da API abre a API na guia **Explorador de API**.
 
-Para obter mais informações sobre como trabalhar com chaves e segredos, consulte
-[Gerenciar chaves e segredos](keys_secrets.html).
+Para obter mais informações sobre como trabalhar com chaves e segredos, consulte [Gerenciar chaves e segredos](keys_secrets.html).
 
 ## Visualizando e testando com o Explorador de API
 {: #explore_api}
@@ -157,67 +156,45 @@ A resposta para a solicitação é exibida.
 {: #custom_domains}
 
 Em algumas instâncias, você pode querer um domínio customizado ou "vanity" em
-vez do domínio padrão do gateway da API. A capacidade de gerenciamento de API suporta
-APIs de frente com domínios customizados, desde que o domínio esteja registrado em
-seu ambiente {{site.data.keyword.Bluemix_notm}}.
+vez do domínio padrão do gateway da API. O recurso de gerenciamento de API suporta as APIs frontais com um nome de domínio de sua escolha.
 
 Conclua as etapas a seguir para configurar inicialmente o domínio customizado. Se
 você já concluiu as etapas para configurar o domínio, consulte
 [Usando um domínio customizado com suas
 APIs](manage_apis.html#custom_domains_bind).
 
+Os domínios customizados não são isolados para uma única API, mas têm o escopo definido para um grupo de APIs definido por:
+- Serviço {{site.data.keyword.Bluemix_notm}} originador (por exemplo, {{site.data.keyword.openwhisk_short}})
+- Espaço do Cloud Foundry
+
+Por exemplo, um domínio customizado teria seu escopo definido para todas as APIs do {{site.data.keyword.openwhisk_short}} criadas no espaço "dev" do Cloud Foundry.
+
 ### Configuração
 
-Para colocar um domínio customizado na frente de uma API, primeiro registre seu
-domínio no {{site.data.keyword.Bluemix_notm}}. Isso pode ser feito na tela de
-gerenciamento da organização:
+Para iniciar, primeiro crie uma nova API em um serviço {{site.data.keyword.Bluemix_notm}} que suporte o recurso Gerenciamento de API integrado ou crie um Proxy de API usando o console de APIs do {{site.data.keyword.Bluemix_notm}}.
 
-1. No seletor de organização no cabeçalho
-{{site.data.keyword.Bluemix_notm}}, selecione **Gerenciar organizações**.
-2. Localize a organização desejada na qual o domínio deve ser registrado e
-selecione **Visualizar detalhes**.
-3. Clique no link **Editar organização** ao lado do nome da organização.
-4. Selecione a guia **Domínios**.
-5. Clique em **Incluir domínio** e insira o nome de domínio.
-6. Após o domínio aparecer na lista, selecione **Salvar** na parte superior da tela.
-7. Faça upload de um certificado SSL para esse domínio. Isso pode ser feito
-selecionando o ícone **Fazer upload** ao lado do nome do domínio. O
-certificado público e a chave privada correspondente são obrigatórios.  
-	**Notas:**
-	* O gateway de gerenciamento de API suporta apenas o tráfego no protocolo HTTPS,
-de modo que um certificado SSL deve ser fornecido.
-	* As contas para teste do {{site.data.keyword.Bluemix_notm}} são
-limitadas a um único certificado SSL por organização. Se certificados adicionais forem necessários, deve-se fazer upgrade da sua conta para uma camada paga ou de assinatura.
-	* Se você planejar usar um ou mais subdomínios para tráfego de API, um certificado
-curinga ou um certificado que contenha *Subject Alternative Names* (SANs)
-será necessário.
-8. Configurar as definições de DNS do domínio. 
-9. Crie um registro CNAME para o domínio indicando um dos seguintes terminais
-seguros, dependendo de qual região hospeda a API de destino:
-	- **Sul dos EUA:** secure.us-south.bluemix.net.
-	- **Reino Unido:** secure.eu-gb.bluemix.net.
-	- **Frankfurt:** secure.eu-de.bluemix.net.
-	- **Sydney:** secure.au-syd.bluemix.net.
+#### Preparar certificados
+
+Para registrar um domínio customizado, certificados TLS válidos devem ser fornecidos durante a configuração. Use o serviço [Certificate Manager](../services/certificate-manager) para fazer upload de um certificado e uma chave privada.
+
+*Observação: as chamadas de API estão disponíveis somente usando o TLS (porta 443). O HTTP simples não é suportado.*
 
 ### Usando um domínio customizado com suas APIs
 {: #custom_domains_bind}
 
-Após a configuração inicial ser concluída, ligue uma ou mais APIs ao domínio
-registrado na seção **Definição** da API concluindo as seguintes
+Após a configuração inicial ser concluída, ligue uma ou mais APIs ao domínio registrado na seção **Domínios customizados** do console de APIs do {{site.data.keyword.Bluemix_notm}} concluindo as seguintes
 etapas:
-1. Em *Configurações básicas de API*, selecione o menu Domínio de API e escolha um
-domínio customizado dentre os domínios que você configurou nas etapas anteriores.
 
-2. Opcional: Forneça um subdomínio exclusivo para essa API.
-	**Nota**:
-Para usar um subdomínio, o certificado SSL que foi
-transferido por upload na Etapa 7 de `Configuração` deve conter uma
-configuração curinga válida *ou* cada subdomínio deve ser listado como um
-Subject Alternative Name (SAN).
+1. Na lista de destinos disponíveis, localize o serviço ou o domínio padrão ao qual o domínio customizado deve ser conectado.
+2. Em uma janela ou guia do navegador separada, navegue até a página de configurações do provedor DNS e crie um registro CNAME para o domínio desejado. Use o valor da coluna **Domínio/Alias padrão** na página de gerenciamento de domínio customizado do {{site.data.keyword.Bluemix_notm}} como o destino CNAME e, em seguida, salve suas configurações de DNS.
+  
+    *Observação: a propagação das mudanças de DNS pode levar até 48 horas, embora as mudanças geralmente ocorram mais rapidamente do que isso.*
+  
+3. Na página de domínios customizados, clique nos três pontos na linha que contém o "domínio padrão" de destino e selecione **Editar** no menu.
+4. No diálogo resultante, marque a caixa de seleção **Designar um domínio customizado**.
+5. Especifique o domínio customizado desejado no campo **Nome do domínio** (por exemplo, *api.mycompany.com*)
+6. Copie o Cloud Resource Name (CRN) do Certificate Manager para o certificado que foi transferido por upload durante a configuração inicial.
+7. Cole o CRN que você copiou no campo **CRN de certificado**.
+8. Clique em **Salvar**. O nome do domínio especificado deve aparecer na linha ao lado do domínio padrão, indicando que ele foi aplicado com sucesso.
 
-3. Salve a API. As configurações do domínio podem levar vários minutos para se
-tornarem ativas.
-
-Para obter mais informações, consulte:
-[Gerenciando domínios](../admin/manageorg.html#managedomains) ou
-[Criando e usando um domínio customizado](../manageapps/updapps.html#domain).
+*Observação: antes que o domínio customizado seja aplicado, o ponteiro DNS será verificado, assegurando que o CNAME do domínio customizado aponte para o domínio padrão associado às APIs. Se a configuração do DNS não tiver sido concluída ou as mudanças de DNS da Etapa 2 ainda não tiverem sido propagadas, um erro aparecerá e as configurações de domínio não serão salvas. Se isso ocorrer, tente novamente periodicamente até 48 horas depois de mudar as configurações de DNS. Se o erro persistir depois de 48 horas, verifique suas configurações de DNS ou entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}.*

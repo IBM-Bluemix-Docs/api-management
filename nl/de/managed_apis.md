@@ -16,7 +16,7 @@ lastupdated: "2018-01-11"
 # Eigene APIs
 {: #manage_api}
 
-Wählen Sie in der Navigation des Abschnitts **APIs** die Option **Verwaltete APIs** aus, um den Gesamtstatus der APIs anzuzeigen, die von Ihnen verwaltet werden oder früher verwaltet wurden, momentan jedoch nicht zugänglich sind. Wählen Sie **Gemeinsam genutzte APIs** aus, um alle APIs anzuzeigen, die in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation über das API-Management oder den {{site.data.keyword.apiconnect_full}}-Service gemeinsam genutzt wurden. Hier finden Sie auch **Preislisten** und Details für die verfügbaren {{site.data.keyword.apiconnect_service}}-Serviceoptionen.
+Wählen Sie in der Navigation des Abschnitts **APIs** die Option **Verwaltete APIs** aus, um den Gesamtstatus der APIs anzuzeigen, die von Ihnen verwaltet werden oder früher verwaltet wurden, momentan jedoch nicht zugänglich sind. Wählen Sie **Gemeinsam genutzte APIs** aus, um alle APIs anzuzeigen, die in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation über das API-Management oder den {{site.data.keyword.apiconnect_full}}-Service gemeinsam genutzt wurden. Hier finden Sie auch **Preislisten** und Details für die verfügbaren {{site.data.keyword.apiconnect_short}}-Serviceoptionen.
 
 Im Dashboard für APIs können alle APIs angezeigt werden, die über das API-Management verwaltet werden. 
 

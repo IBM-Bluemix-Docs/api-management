@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -41,7 +41,7 @@ lastupdated: "2018-01-10"
 
 4. ナビゲーションで**「定義」**を選択します。
 
-5. *「API 定義ファイル」*セクションで、**「API 定義ファイル」**>**「API Connect にエクスポート (Export to API Connect)」**>**「API のエクスポート (Export API)」**を選択します。 既存の {{site.data.keyword.apiconnect_short}} サービスが既にある場合は、API が既存のサービスに自動的にマイグレーションされます。 まだ {{site.data.keyword.apiconnect_short}} サービスを構成していない場合は、自動的に無料のライト・プランでサービスが追加され、API がマイグレーションされます。 インスタンスをプロビジョンできなかった場合は、『[{{site.data.keyword.apiconnect_short}} への API の手動マイグレーション](#man_migrate_api)』のステップを実行して、手動で新規サービスにマイグレーションしてください。 
+5. *「API 定義ファイル」*セクションで、**「API 定義ファイル」** > **「API Connect で開く (Open in API Connect)」** > **「続行」**を選択します。既存の {{site.data.keyword.apiconnect_short}} サービスが既にある場合は、API が既存のサービスに自動的にマイグレーションされます。 まだ {{site.data.keyword.apiconnect_short}} サービスを構成していない場合は、自動的に無料のライト・プランでサービスが追加され、API がマイグレーションされます。 インスタンスをプロビジョンできなかった場合は、『[{{site.data.keyword.apiconnect_short}} への API の手動マイグレーション](#man_migrate_api)』のステップを実行して、手動で新規サービスにマイグレーションしてください。 
 
 6. 元の API の画面を閉じる前に、**「管理対象 API の公開」**のスライダーを無効にします。 これにより、どのユーザーも古いバージョンのエンドポイントを操作できなくなります。
 
@@ -53,7 +53,7 @@ lastupdated: "2018-01-10"
 
 3. ナビゲーションで**「定義」**を選択します。
 
-4. **「API 定義ファイル」**>**「API Connect にエクスポート (Export to API Connect)」**>**「API のエクスポート (Export API)」**を選択します。 既存の {{site.data.keyword.apiconnect_short}} サービスが既にある場合は、API が既存のサービスに自動的にマイグレーションされます。 まだ {{site.data.keyword.apiconnect_short}} サービスを構成していない場合は、自動的に無料のライト・プランでサービスが追加され、API がマイグレーションされます。 インスタンスをプロビジョンできなかった場合は、『[{{site.data.keyword.apiconnect_short}} への API の手動マイグレーション](#man_migrate_api)』のステップを実行して、手動で新規サービスにマイグレーションしてください。
+4. **「API 定義ファイル」** > **「API Connect で開く (Open in API Connect)」** > **「続行」**を選択します。既存の {{site.data.keyword.apiconnect_short}} サービスが既にある場合は、API が既存のサービスに自動的にマイグレーションされます。 まだ {{site.data.keyword.apiconnect_short}} サービスを構成していない場合は、自動的に無料のライト・プランでサービスが追加され、API がマイグレーションされます。 インスタンスをプロビジョンできなかった場合は、『[{{site.data.keyword.apiconnect_short}} への API の手動マイグレーション](#man_migrate_api)』のステップを実行して、手動で新規サービスにマイグレーションしてください。
    
 5. コンテンツが {{site.data.keyword.apiconnect_short}} インスタンスにマイグレーションされたら、提供されたリンクを選択して、マイグレーション済みのバージョンにアクセスします。
     **重要:** 実行中の API の複数インスタンスでの問題を回避するため、必ず元のバージョンの API で*「API の管理 (Manage the API)」*スライダーを無効にしてください。

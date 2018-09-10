@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017,2018
+lastupdated: "2018-01-05"
 
 ---
 
@@ -23,7 +23,7 @@ Quando le tue API sono gestite dalla gestione delle API, puoi utilizzare le chia
 
 Per aggiungere una chiave alla tua API, completa la seguente procedura:
 
-1. Apri la tua applicazione Cloud Foundry o l'API OpenWhisk, se non sono già aperte.
+1. Apri la tua applicazione Cloud Foundry o l'API {{site.data.keyword.openwhisk_short}}, se non sono già aperte.
 
 2. Seleziona *Gestione API* nel riquadro di navigazione.
 
@@ -33,7 +33,7 @@ Per aggiungere una chiave alla tua API, completa la seguente procedura:
 
 5. Crea una chiave per un cliente che ha accesso alla tua organizzazione {{site.data.keyword.Bluemix_notm}}.
   1. Seleziona **Crea chiave API +** nella sezione *Condivisione nell'organizzazione {{site.data.keyword.Bluemix_notm}}*. Una chiave e un segreto vengono automaticamente creati e inseriti nei campi corretti. Non puoi aggiornare la chiave o il segreto per questo tipo di chiave. 
-  2. Immetti un nome per la chiave e il segreto per aiutarti a identificarli. Ad esempio, il nome del cliente che li userà.
+  2. Immetti un nome per la chiave e il segreto per aiutarti a identificarli. Ad esempio, il nome del cliente che la userà.
   3. Seleziona **Salva** per salvare la nuova chiave.
   4. Puoi ripetere i passi da *a* a *c* per ulteriori chiavi, se necessario. Puoi avere un massimo di 5 chiavi in questa sezione per API.
 
@@ -43,7 +43,7 @@ Per aggiungere una chiave alla tua API, completa la seguente procedura:
   3. Facoltativo: se vuoi aggiungere un segreto alla chiave, seleziona **Collegamento del portale API** per la chiave a cui vuoi aggiungere il segreto e seleziona **Configura segreto API**.
   4. Seleziona **Salva** per salvare la nuova chiave.
   5. Puoi ripetere i passi da *a* a *d* per ulteriori chiavi, se necessario. Puoi avere un massimo di 5 chiavi in questa sezione per API.
-Le chiavi vengono elencate per l'API quando viene selezionata la scheda Condivisione e chiavi.
+Le chiavi vengono elencate per l'API quando viene selezionata la scheda *Condivisione e chiavi*.
 
 ## Specifica di una chiave e di un segreto in una chiamata API
 {: #spec_key_secret}
@@ -65,7 +65,7 @@ Dove *add_secret_here* viene sostituito con il segreto per la chiave corretta.
 
 Ad un certo punto, vorrai rimuovere una chiave. Forse un cliente che ha utilizzato la tua API crea la propria API e non ha più bisogno delle tue. Per assicurarti che nessuno dei suoi clienti stia ancora utilizzando la tua API, puoi eliminare la chiave. Per eliminare una chiave dal servizio, completa la seguente procedura:
 
-1. Apri la tua applicazione Cloud Foundry o l'API OpenWhisk, se non sono già aperte.
+1. Apri la tua applicazione Cloud Foundry o l'API {{site.data.keyword.openwhisk_short}}, se non sono già aperte.
 
 2. Seleziona *Gestione API* nel riquadro di navigazione.
 

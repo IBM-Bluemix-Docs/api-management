@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017,2018
+lastupdated: "2018-01-05"
 
 ---
 
@@ -23,7 +23,7 @@ Quand vos API sont gérées par la fonctionnalité de gestion des API, vous pouv
 
 Pour ajouter une clé à votre API, procédez comme suit :
 
-1. Ouvrez votre application Cloud Foundry ou l'API OpenWhisk, si ce n'est pas déjà fait.
+1. Ouvrez votre application Cloud Foundry ou l'API {{site.data.keyword.openwhisk_short}}, si ce n'est pas déjà fait.
 
 2. Sélectionnez *API Management* dans la navigation.
 
@@ -43,7 +43,7 @@ Pour ajouter une clé à votre API, procédez comme suit :
   3. Facultatif : si vous voulez ajouter une valeur confidentielle, sélectionnez **Lien vers le portail d'API** pour la clé dans laquelle vous voulez ajouter la valeur confidentielle et sélectionnez la commande permettant de définir la valeur confidentielle d'API.
   4. Sélectionnez **Enregistrer** pour enregistrer la nouvelle clé.
   5. Vous pouvez répéter les étapes *a* à *d* pour les clés supplémentaires, si nécessaire. Vous pouvez avoir un maximum de 5 clés dans cette section par API.
-Vos clés sont répertoriées pour l'API quand l'onglet Partage et clés est sélectionné.
+Vos clés sont répertoriées pour l'API quand l'onglet *Partage et clés* est sélectionné.
 
 ## Spécification d'une clé et d'une valeur confidentielle dans un appel d'API
 {: #spec_key_secret}
@@ -65,7 +65,7 @@ Où *add_secret_here* est remplacé par la valeur confidentielle pour la clé ad
 
 A un certain moment, vous voudrez peut-être retirer une clé. Un client qui utilisait votre API peut avoir créé sa propre API et ne plus avoir besoin de la vôtre. Pour vous assurer qu'aucun de ses propres clients n'utilise votre API,vous pouvez supprimer la clé. Pour supprimer une clé d'un service, procédez comme suit :
 
-1. Ouvrez votre application Cloud Foundry ou l'API OpenWhisk, si ce n'est pas déjà fait.
+1. Ouvrez votre application Cloud Foundry ou l'API {{site.data.keyword.openwhisk_short}}, si ce n'est pas déjà fait.
 
 2. Sélectionnez *API management* dans la navigation.
 

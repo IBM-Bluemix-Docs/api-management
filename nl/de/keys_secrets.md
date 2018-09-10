@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017,2018
+lastupdated: "2018-01-05"
 
 ---
 
@@ -23,7 +23,7 @@ Wenn Ihre APIs mithilfe des API-Managements verwaltet werden, dann können Sie S
 
 Führen Sie die folgenden Schritte aus, um einen Schlüssel zu Ihrer API hinzuzufügen:
 
-1. Öffnen Sie die Cloud Foundry-Anwendung oder die OpenWhisk-API, sofern diese Komponenten noch nicht geöffnet wurden.
+1. Öffnen Sie die Cloud Foundry-Anwendung oder die {{site.data.keyword.openwhisk_short}}-API, sofern diese Komponenten noch nicht geöffnet wurden.
 
 2. Wählen Sie im Navigationsbereich die Option *API-Management* aus.
 
@@ -43,7 +43,7 @@ Führen Sie die folgenden Schritte aus, um einen Schlüssel zu Ihrer API hinzuzu
   3. Optional: Wenn Sie einen geheimen Schlüssel zum Schlüssel hinzufügen möchten, dann wählen Sie für den Schlüssel, zu dem der geheime Schlüssel hinzugefügt werden soll, die Option **API-Portallink** und anschließend **Geheimen Schlüssel für API festlegen** aus.
   4. Wählen Sie **Speichern** aus, um den neuen Schlüssel zu speichern.
   5. Sie können die Schritte *a* bis *d* bei Bedarf für weitere Schlüssel wiederholen. Sie können maximal fünf Schlüssel pro API in diesem Abschnitt definieren.
-Ihre Schlüssel werden für die API aufgelistet, sobald die Registerkarte 'Gemeinsame Nutzung & Schlüssel' ausgewählt wird.
+Ihre Schlüssel werden für die API aufgelistet, sobald die Registerkarte *Gemeinsame Nutzung & Schlüssel* ausgewählt wird.
 
 ## Schlüssel und geheimen Schlüssel in API-Aufruf angeben
 {: #spec_key_secret}
@@ -65,7 +65,7 @@ Hierbei wird *add_secret_here* durch den geheimen Schlüssel für den korrekten 
 
 Möglicherweise tritt eine Situation ein, in der Sie einen Schlüssel entfernen möchten. Möglicherweise erstellt ein Kunde, der Ihre API bislang verwendet hat, nun eine eigene API und benötigt Ihre API deshalb nicht mehr. Um sicherzustellen, dass keiner der Kunden mehr Ihre API verwendet, können Sie den Schlüssel löschen. Führen Sie die folgenden Schritte aus, um einen Schlüssel aus dem Service zu löschen:
 
-1. Öffnen Sie die Cloud Foundry-Anwendung oder die OpenWhisk-API, sofern diese Komponenten noch nicht geöffnet wurden.
+1. Öffnen Sie die Cloud Foundry-Anwendung oder die {{site.data.keyword.openwhisk_short}}-API, sofern diese Komponenten noch nicht geöffnet wurden.
 
 2. Wählen Sie im Navigationsbereich die Option *API-Management* aus.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -37,25 +37,24 @@ precisará migrar suas APIs do gerenciamento de API para o serviço
 {{site.data.keyword.apiconnect_short}} selecionando e concluindo o
 procedimento a seguir para o tipo de API que você está migrando.
 
-### API de funções Cloud
+### API do Cloud Functions
 
-1. Selecione **Funções** no menu {{site.data.keyword.Bluemix_notm}} para visualizar suas funções Cloud.
+1. Selecione **Functions** no menu {{site.data.keyword.Bluemix_notm}} para visualizar suas Cloud Functions.
 
-2. Na lista Funções, selecione **APIs** na navegação.
+2. Na lista Functions, selecione **APIs** na navegação.
 
 3. Selecione o nome da API de função que você deseja migrar.
 
 4. Selecione **Definição** na navegação.
 
-5. Selecione **Arquivo de definição de API** >
-**Exportar para API Connect** > **Exportar API** na
-seção *Arquivo de definição de API*. Se você já tiver um serviço
-{{site.data.keyword.apiconnect_short}} existente, ele migrará
-automaticamente a API para o serviço existente. Se você ainda não tiver um serviço
-{{site.data.keyword.apiconnect_short}} configurado, ele o incluirá
+5. Selecione **Arquivo de definição de API** > **Abrir no API Connect** > **Continuar** na seção *Arquivo de definição de API*. Se
+você já tiver um serviço {{site.data.keyword.apiconnect_short}} existente, ele
+migrará automaticamente a API para o serviço existente. Se você ainda não tiver um
+serviço {{site.data.keyword.apiconnect_short}} configurado, ele o incluirá
 automaticamente com um plano Lite grátis e migrará a API. Se sua instância falhou ao
 provisionar, conclua as etapas em [Migrando manualmente as
-APIs para {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrá-la manualmente para o novo serviço. 
+APIs para {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrá-la manualmente
+para o novo serviço. 
 
 6. Antes de fechar a tela da API original, desative a régua de controle para
 **Expor API gerenciada**. Isso evita que alguém aja no terminal da versão antiga.
@@ -69,8 +68,7 @@ APIs para {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrá-
 
 3. Selecione **Definição** na navegação.
 
-4. Selecione **Arquivo de definição de API** >
-**Exportar para API Connect** > **Exportar API**. Se
+4. Selecione **Arquivo de definição de API** > **Abrir no API Connect** > **Continuar**. Se
 você já tiver um serviço {{site.data.keyword.apiconnect_short}} existente, ele
 migrará automaticamente a API para o serviço existente. Se você ainda não tiver um
 serviço {{site.data.keyword.apiconnect_short}} configurado, ele o incluirá
@@ -103,8 +101,8 @@ as seguintes etapas para migrá-lo manualmente:
 		1. Selecione **Painel** no Menu.
 		2. Selecione o nome do app Cloud Foundry que você deseja migrar.
 		3. Selecione **API Management** na navegação.
-	3. Para uma ação de Funções Cloud: 
-		1. Selecione **Funções** no Menu.
+	3. Para uma ação do Cloud Functions: 
+		1. Selecione **Functions** no Menu.
 		2. Selecione **APIs** na navegação.
 		3. Selecione o nome da API que você deseja migrar.
 2. Faça download do documento Swagger para a API por meio do gerenciamento de API.

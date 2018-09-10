@@ -16,7 +16,7 @@ lastupdated: "2018-01-11"
 # マイ API
 {: #manage_api}
 
-**「API」**セクションのナビゲーションで **「管理対象 API」**を選択して、管理している API および以前に管理していたが現在は公開していない API の全体の状況を表示します。 **「共有 API」**を選択すると、API Management または {{site.data.keyword.apiconnect_full}} サービスを通じて {{site.data.keyword.Bluemix_notm}} 組織と共有されたすべての API が表示されます。 **「料金」**には、使用可能な {{site.data.keyword.apiconnect_service}} サービス・オプションがリストされ、その詳細が示されます。
+**「API」**セクションのナビゲーションで **「管理対象 API」**を選択して、管理している API および以前に管理していたが現在は公開していない API の全体の状況を表示します。 **「共有 API」**を選択すると、API Management または {{site.data.keyword.apiconnect_full}} サービスを通じて {{site.data.keyword.Bluemix_notm}} 組織と共有されたすべての API が表示されます。 **「料金」**には、使用可能な {{site.data.keyword.apiconnect_short}} サービス・オプションがリストされ、その詳細が示されます。
 
 API ダッシュボードを使用して、API Management によって一緒に管理しているすべての API を表示できます。 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -41,7 +41,7 @@ Wenn Sie ein Upgrade auf {{site.data.keyword.apiconnect_short}} durchführen mö
 
 4. Wählen Sie in der Navigation **Definition** aus.
 
-5. Wählen Sie im Abschnitt *API-Definitionsdatei* die Optionen für **API-Definitionsdatei** > **In API Connect exportieren** > **API exportieren** aus. Wenn Sie bereits über einen {{site.data.keyword.apiconnect_short}}-Service verfügen, dann wird die API automatisch auf den vorhandenen Service migriert. Wenn Sie noch keinen {{site.data.keyword.apiconnect_short}}-Service konfiguriert haben, dann wird der Service automatisch mit einem kostenlosen Lite-Plan hinzugefügt und die API wird migriert. Wenn die Bereitstellung für die Instanz fehlgeschlagen ist, dann müssen Sie die Schritte zum [manuellen Migrieren von APIs auf {{site.data.keyword.apiconnect_short}}](#man_migrate_api) ausführen, um die Migration auf den neuen Service manuell auszuführen. 
+5. Wählen Sie **API-Definitionsdatei** > **In API Connect öffnen** > **Weiter** im Abschnitt *API-Definitionsdatei* aus. Wenn Sie bereits über einen {{site.data.keyword.apiconnect_short}}-Service verfügen, dann wird die API automatisch auf den vorhandenen Service migriert. Wenn Sie noch keinen {{site.data.keyword.apiconnect_short}}-Service konfiguriert haben, dann wird der Service automatisch mit einem kostenlosen Lite-Plan hinzugefügt und die API wird migriert. Wenn die Bereitstellung für die Instanz fehlgeschlagen ist, dann müssen Sie die Schritte zum [manuellen Migrieren von APIs auf {{site.data.keyword.apiconnect_short}}](#man_migrate_api) ausführen, um die Migration auf den neuen Service manuell auszuführen. 
 
 6. Bevor Sie die Anzeige der ursprünglichen API schließen, müssen Sie den Schieberegler für **Verwaltete API zugänglich machen** inaktivieren. Dadurch wird verhindert, dass Benutzer weiterhin mit dem Endpunkt der alten Version arbeiten können.
 
@@ -53,7 +53,7 @@ Wenn Sie ein Upgrade auf {{site.data.keyword.apiconnect_short}} durchführen mö
 
 3. Wählen Sie in der Navigation **Definition** aus.
 
-4. Wählen Sie die Optionen für **API-Definitionsdatei** > **In API Connect exportieren** > **API exportieren** aus. Wenn Sie bereits über einen {{site.data.keyword.apiconnect_short}}-Service verfügen, dann wird die API automatisch auf den vorhandenen Service migriert. Wenn Sie noch keinen {{site.data.keyword.apiconnect_short}}-Service konfiguriert haben, dann wird der Service automatisch mit einem kostenlosen Lite-Plan hinzugefügt und die API wird migriert. Wenn die Bereitstellung für die Instanz fehlgeschlagen ist, dann müssen Sie die Schritte zum [manuellen Migrieren von APIs auf {{site.data.keyword.apiconnect_short}}](#man_migrate_api) ausführen, um die Migration auf den neuen Service manuell auszuführen.
+4. Wählen Sie **API-Definitionsdatei** > **In API Connect öffnen** > **Weiter** aus. Wenn Sie bereits über einen {{site.data.keyword.apiconnect_short}}-Service verfügen, dann wird die API automatisch auf den vorhandenen Service migriert. Wenn Sie noch keinen {{site.data.keyword.apiconnect_short}}-Service konfiguriert haben, dann wird der Service automatisch mit einem kostenlosen Lite-Plan hinzugefügt und die API wird migriert. Wenn die Bereitstellung für die Instanz fehlgeschlagen ist, dann müssen Sie die Schritte zum [manuellen Migrieren von APIs auf {{site.data.keyword.apiconnect_short}}](#man_migrate_api) ausführen, um die Migration auf den neuen Service manuell auszuführen.
    
 5. Nachdem der Inhalt auf die {{site.data.keyword.apiconnect_short}}-Instanz migriert wurde, müssen Sie den Link auswählen, der für den Zugriff auf die migrierte Version bereitgestellt wird.
     **Wichtig:** Um Probleme mit mehreren aktiven Instanzen der API zu vermeiden, sollten Sie sicherstellen, dass Sie den Schieberegler *API verwalten* in der ursprünglichen Version der API inaktivieren.

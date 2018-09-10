@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-08-23"
 
 ---
 
@@ -20,6 +20,11 @@ O gerenciamento de API do {{site.data.keyword.Bluemix_notm}} foi atualizado conf
 {:shortdesc}
 
 As atualizações a seguir foram feitas, organizadas de acordo com o mês da liberação:
+
+## Agosto de 2018
+{: #0818updates}
+* Procedimento atualizado para configuração de domínios customizados. Para obter mais
+informações, consulte [Domínios customizados](manage_apis.html#custom_domains).
 
 ## Janeiro de 2018
 {: #0118updates}

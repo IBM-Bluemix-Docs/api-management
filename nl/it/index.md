@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -42,7 +42,7 @@ Puoi visualizzare le seguenti statistiche sulle tue API:
 * Il numero di chiamate API al minuto.
 * Le ultime 100 risposte.
 
-Gestione delle API utilizza i servizi di metriche e registrazione di {{site.data.keyword.Bluemix_notm}} per memorizzare e visualizzare le informazioni che vengono generate durante le chiamate all'API. Solo un sottoinsieme dei dati disponibili viene presentato nella console di gestione API per scopi di debug. Per visualizzare ulteriori informazioni su dati e log, vedi i [log Kibana ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window}. Devi accedere al tuo account {{site.data.keyword.Bluemix_notm}} affinché il link venga risolto correttamente nel tuo account. Per ulteriori informazioni sui servizi di registrazione {{site.data.keyword.Bluemix_notm}}, vedi [Monitoraggio e registrazione](../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}.
+Gestione delle API utilizza i servizi di metriche e registrazione di {{site.data.keyword.Bluemix_notm}} per memorizzare e visualizzare le informazioni che vengono generate durante le chiamate all'API. Solo un sottoinsieme dei dati disponibili viene presentato nella console di gestione API per scopi di debug. Per visualizzare ulteriori informazioni su dati e log, vedi i [log Kibana ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://logging.ng.bluemix.net/app/#/kibana5){: new_window}. Devi accedere al tuo account {{site.data.keyword.Bluemix_notm}} affinché il link venga risolto correttamente nel tuo account. Per ulteriori informazioni sui servizi di registrazione {{site.data.keyword.Bluemix_notm}}, vedi [Monitoraggio e registrazione](../cli/monitoring_logging.html#monitoring_logging){: new_window}.
 
 ## Limitazione della frequenza in base alla sottoscrizione (chiave API)
 {: #rate_limit notoc}

@@ -23,7 +23,7 @@ que gerenciava anteriormente, mas atualmente não estão expostas. Selecione
 com sua organização {{site.data.keyword.Bluemix_notm}} por meio do gerenciamento
 de API ou por meio do serviço {{site.data.keyword.apiconnect_full}}. **Precificação**
 lista e fornece os detalhes das opções de serviço
-{{site.data.keyword.apiconnect_service}} disponíveis.
+{{site.data.keyword.apiconnect_short}} disponíveis.
 
 É possível visualizar todas as APIs que você gerencia em conjunto com o gerenciamento de API usando o painel APIs. 
 
