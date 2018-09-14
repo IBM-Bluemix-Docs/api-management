@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017,2018
+lastupdated: "2018-01-05"
 
 ---
 
@@ -23,7 +23,7 @@ Cuando las API están gestionadas por la gestión de API, puede utilizar claves 
 
 Para añadir una clave para la API, siga los pasos siguientes:
 
-1. Abra la aplicación de Cloud Foundry o la API de OpenWhisk, si no está ya abierta.
+1. Abra la aplicación de Cloud Foundry o la API de {{site.data.keyword.openwhisk_short}}, si no está ya abierta.
 
 2. Seleccione *Gestión de API* en la navegación.
 
@@ -43,7 +43,7 @@ Para añadir una clave para la API, siga los pasos siguientes:
   3. Opcional: Si desea añadir un secreto a la clave, seleccione el **Enlace con portal de la API** para la clave a la que desee añadir el secreto y seleccione **Establecer secreto de API**.
   4. Seleccione **Guardar** para guardar la nueva clave.
   5. Puede repetir los pasos *a* a *d* para obtener claves adicionales, si es necesario. Puede tener un máximo de 5 claves en esta sección por API.
-Las claves se enumeran para la API cuando está seleccionado el separador Compartición y claves.
+Las claves se enumeran para la API cuando está seleccionado el separador *Compartición y claves*.
 
 ## Especificación de una clave y un secreto en una llamada de API
 {: #spec_key_secret}
@@ -65,7 +65,7 @@ Donde *add_secret_here* se sustituye por el secreto de la clave correcta.
 
 En algún momento, deseará eliminar una clave. Puede que un cliente que utilizara la API cree su propia API y ya no necesite la suya. Para garantizar que ninguno de sus clientes siga utilizando la API, puede suprimir la clave. Para suprimir una clave del servicio, siga los pasos siguientes:
 
-1. Abra la aplicación de Cloud Foundry o la API de OpenWhisk, si no está ya abierta.
+1. Abra la aplicación de Cloud Foundry o la API de {{site.data.keyword.openwhisk_short}}, si no está ya abierta.
 
 2. Seleccione *Gestión de API* en la navegación.
 

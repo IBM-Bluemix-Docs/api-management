@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -41,7 +41,7 @@ Si decide actualizar a {{site.data.keyword.apiconnect_short}}, tendrá que migra
 
 4. Seleccione **Definición** en la navegación.
 
-5. Seleccione **Archivo de definición de API** > **Exportar a API Connect** > **Exportar API** en la sección *Archivo de definición de API*. Si ya tiene un servicio de {{site.data.keyword.apiconnect_short}} existente, se migrará la API automáticamente al servicio existente. Si todavía no tiene un servicio de {{site.data.keyword.apiconnect_short}} configurado, se añadirá automáticamente el servicio con un plan Lite gratuito y migrará la API. Si la instancia no se ha podido suministrar, siga los pasos de [Migración manual de API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrarla manualmente al nuevo servicio. 
+5. Seleccione **Archivo de definición de API** > **Abrir en API Connect** > **Continuar** en la sección *Archivo de definición de API*. Si ya tiene un servicio de {{site.data.keyword.apiconnect_short}} existente, se migrará la API automáticamente al servicio existente. Si todavía no tiene un servicio de {{site.data.keyword.apiconnect_short}} configurado, se añadirá automáticamente el servicio con un plan Lite gratuito y migrará la API. Si la instancia no se ha podido suministrar, siga los pasos de [Migración manual de API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrarla manualmente al nuevo servicio. 
 
 6. Antes de cerrar la pantalla de la API original, inhabilite el control deslizante para **Exponer API gestionada**. Esto impide que cualquiera actúe en el punto final de la versión anterior.
 
@@ -53,7 +53,7 @@ Si decide actualizar a {{site.data.keyword.apiconnect_short}}, tendrá que migra
 
 3. Seleccione **Definición** en la navegación.
 
-4. Seleccione **Archivo de definición de API** > **Exportar a API Connect** > **Exportar API**. Si ya tiene un servicio de {{site.data.keyword.apiconnect_short}} existente, se migrará la API automáticamente al servicio existente. Si todavía no tiene un servicio de {{site.data.keyword.apiconnect_short}} configurado, se añadirá automáticamente el servicio con un plan Lite gratuito y migrará la API. Si la instancia no se ha podido suministrar, siga los pasos de [Migración manual de API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrarla manualmente al nuevo servicio.
+4. Seleccione **Archivo de definición de API** > **Abrir en API Connect** > **Continuar**. Si ya tiene un servicio de {{site.data.keyword.apiconnect_short}} existente, se migrará la API automáticamente al servicio existente. Si todavía no tiene un servicio de {{site.data.keyword.apiconnect_short}} configurado, se añadirá automáticamente el servicio con un plan Lite gratuito y migrará la API. Si la instancia no se ha podido suministrar, siga los pasos de [Migración manual de API a {{site.data.keyword.apiconnect_short}}](#man_migrate_api) para migrarla manualmente al nuevo servicio.
    
 5. Una vez que el contenido se haya migrado a la instancia de {{site.data.keyword.apiconnect_short}}, seleccione el enlace que se proporciona para acceder a la versión migrada.
     **Importante:** Para evitar problemas con varias instancias de la API en ejecución, asegúrese de inhabilitar el control deslizante *Gestionar la API* en la versión original de la API.

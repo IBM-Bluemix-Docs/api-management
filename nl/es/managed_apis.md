@@ -16,7 +16,7 @@ lastupdated: "2018-01-11"
 # Mis API
 {: #manage_api}
 
-Seleccione **API gestionadas** en la navegación de la sección **API** para ver el estado general de las API que gestiona y de las que ha gestionado pero actualmente no están expuestas. Seleccione **API compartidas** para ver todas las API que se han compartido con su organización de {{site.data.keyword.Bluemix_notm}} a través de la gestión de API o del servicio {{site.data.keyword.apiconnect_full}}. **Tarifas** enumera y proporciona los detalles para las opciones de servicio de {{site.data.keyword.apiconnect_service}} disponibles.
+Seleccione **API gestionadas** en la navegación de la sección **API** para ver el estado general de las API que gestiona y de las que ha gestionado pero actualmente no están expuestas. Seleccione **API compartidas** para ver todas las API que se han compartido con su organización de {{site.data.keyword.Bluemix_notm}} a través de la gestión de API o del servicio {{site.data.keyword.apiconnect_full}}. **Tarifas** enumera y proporciona los detalles para las opciones de servicio de {{site.data.keyword.apiconnect_short}} disponibles.
 
 Puede ver juntas todas las API que gestiona con la gestión de API en el panel de control de API. 
 

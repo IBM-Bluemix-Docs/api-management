@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -42,7 +42,7 @@ Puede ver las siguientes estadísticas sobre las API:
 * El número de llamadas de API por minuto.
 * Las 100 últimas respuestas.
 
-La gestión de API utiliza los servicios de registro y métricas de {{site.data.keyword.Bluemix_notm}} para almacenar y mostrar información que se genera durante las invocaciones de API. En la consulta de gestión de API solo se presenta un subconjunto de los datos disponibles con finalidad de depuración. Para ver información adicional de datos y registro, consulte [Registros de Kibana ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window}. Debe haber iniciado la sesión en la cuenta de {{site.data.keyword.Bluemix_notm}} para que el enlace se resuelva correctamente para su cuenta. Para obtener más información sobre los servicios de registro de {{site.data.keyword.Bluemix_notm}}, consulte [Supervisión y registro](../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}.
+La gestión de API utiliza los servicios de registro y métricas de {{site.data.keyword.Bluemix_notm}} para almacenar y mostrar información que se genera durante las invocaciones de API. En la consulta de gestión de API solo se presenta un subconjunto de los datos disponibles con finalidad de depuración. Para ver información adicional de datos y registro, consulte [Registros de Kibana ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://logging.ng.bluemix.net/app/#/kibana5){: new_window}. Debe haber iniciado la sesión en la cuenta de {{site.data.keyword.Bluemix_notm}} para que el enlace se resuelva correctamente para su cuenta. Para obtener más información sobre los servicios de registro de {{site.data.keyword.Bluemix_notm}}, consulte [Supervisión y registro](../cli/monitoring_logging.html#monitoring_logging){: new_window}.
 
 ## Limitación de la tasa por suscripción (clave de API)
 {: #rate_limit notoc}
