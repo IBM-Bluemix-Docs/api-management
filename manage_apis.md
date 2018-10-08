@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-08-23"
+lastupdated: "2018-10-08"
 
 ---
 
@@ -146,11 +146,11 @@ For example, a custom domain would be scoped to all {{site.data.keyword.openwhis
 
 ### Setup
 
-To get started, first create a new API in an {{site.data.keyword.Bluemix_notm}} service that supports the integrated API Management feature, or create an API Proxy by using the {{site.data.keyword.Bluemix_notm}} APIs console.
+To get started, create a new API in an {{site.data.keyword.Bluemix_notm}} service that supports the integrated API Management feature, or create an API Proxy by using the {{site.data.keyword.Bluemix_notm}} APIs console.
 
 #### Prepare certificates
 
-In order to register a custom domain, valid TLS certificates must be provided during setup. Use the [Certificate Manager](../services/certificate-manager) service to upload a certificate and private key.
+In order to register a custom domain, you must provide valid TLS certificates during setup. Use the [Certificate Manager](../services/certificate-manager) service to upload a certificate and a private key.
 
 *Note: API invocations are only available by using TLS (port 443). Plain HTTP is not supported.*
 
@@ -160,9 +160,9 @@ In order to register a custom domain, valid TLS certificates must be provided du
 After the initial setup is complete, bind one or more APIs to the registered domain from the **Custom domains** section of the {{site.data.keyword.Bluemix_notm}} APIs console by completing the following steps:
 
 1. In the list of available targets, locate the service or default domain to which the custom domain should be attached.
-2. In a separate browser window or tab, navigate to your DNS provider's settings page and create a CNAME record for the desired domain. Use the value of the **Default domain / Alias** column in the {{site.data.keyword.Bluemix_notm}} custom domain management page as the CNAME target, then save your DNS settings.
+2. In a separate browser window or tab, navigate to your DNS provider's *Settings* page and create a TXT record for the desired domain. In your DNS provider's settings, set the `host` field to the desired custom domain (for example, *api.mycompany.com*). Set the `value` field to the value of the **Default domain / Alias** column in the {{site.data.keyword.Bluemix_notm}} custom domain management page. Save your DNS settings.
   
-    *Note: DNS changes can take up to 48 hours to propagate, though changes usually occur more quickly than that.*
+    *Note: DNS changes can take up to 48 hours to propagate, but changes do not usually take that long.*
   
 3. On the custom domains page, click the three dots on the row containing the target "default domain", and select **Edit** from the menu.
 4. In the resulting dialog, select the **Assign a custom domain** checkbox.
@@ -170,5 +170,6 @@ After the initial setup is complete, bind one or more APIs to the registered dom
 6. Copy the Cloud Resource Name (CRN) from Certificate Manager for the certificate that was uploaded during initial setup.
 7. Paste the CRN that you copied into the **Certificate CRN** field.
 8. Click **Save**. The specified domain name should appear in the row next to the default domain, indicating that it was successfully applied.
+9. Finally, return to your DNS provider's settings and create a CNAME record pointing your custom domain (e.g. *api.mycompany.com*) to the **Default domain / Alias**. This will cause traffic through your custom domain to be routed to your backend API.
 
-*Note: Before the custom domain is applied, the DNS pointer will be verified by ensuring that the custom domain CNAME points to the default domain associated with the APIs. If DNS setup has not been completed, or the DNS changes from Step 2 haven't propagated yet, an error will appear and the domain settings won't be saved. If this occurs, try again periodically up to 48 hours after changing the DNS settings. If the error persists beyond 48 hours, verify your DNS settings or contact {{site.data.keyword.Bluemix_notm}} support.*
+*Note: Before the custom domain is applied, the DNS pointer is verified by ensuring that the custom domain TXT record contains the default domain alias that is associated with the APIs. If the DNS setup is not complete or the DNS changes from Step 2 haven't finished propagating, an error appears and the domain settings won't be saved. If this occurs, try again periodically up to 48 hours after changing the DNS settings. If the error persists beyond 48 hours, verify your DNS settings or contact {{site.data.keyword.Bluemix_notm}} support.*
