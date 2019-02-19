@@ -19,7 +19,7 @@ lastupdated: "2018-01-05"
 When your APIs are managed by API management, you can use keys and secrets to control access to the APIs.
 
 ## Creating a key and secret
-{: #create_key_secret}
+{: #create_key_secret_keys_secrets}
 
 To add a key to your API, complete the following steps:
 
@@ -46,7 +46,7 @@ To add a key to your API, complete the following steps:
 Your keys are listed for the API when the *Sharing & keys* tab is selected.
 
 ## Specifying a key and secret in an API call
-{: #spec_key_secret}
+{: #spec_key_secret_keys_secrets}
 
 Your customers can only call your API if they include the correct key, secret, or both in the header of the call. To call the API, they must include the key and secret in the API call as shown in the following example:
 ```
@@ -61,7 +61,7 @@ curl --request PUT \
 Where *add_secret_here* is replaced with the secret for the correct key. 
 
 ## Deleting an API key
-{: #delete_key}
+{: #delete_key_keys_secrets}
 
 At some point, you will want to remove a key. Maybe a customer that used your API creates its own API and no longer needs yours. To ensure that none of their customers are still using your API, you can delete the key. To delete a key from service, complete the following steps:
 

@@ -27,11 +27,12 @@ The API management function that is provided with your {{site.data.keyword.Bluem
 Migrating to the {{site.data.keyword.apiconnect_short}} service is easy, and you do not have to recreate any of the APIs that you are managing with API management. You can migrate your APIs automatically or manually.
 
 ## Automatically migrating APIs to {{site.data.keyword.apiconnect_short}}
-{: #auto_migrate_api}
+{: #auto_migrate_api_upgrade}
 
 If you decide to upgrade to {{site.data.keyword.apiconnect_short}}, you'll need to migrate your APIs from API management to the {{site.data.keyword.apiconnect_short}} service by selecting and completing the following procedure for the type of API that you are migrating.
 
 ### Cloud Functions API
+{: #cloud_functions_api_upgrade}
 
 1. Select **Functions** in your {{site.data.keyword.Bluemix_notm}} menu to view your Cloud Functions.
 
@@ -41,11 +42,12 @@ If you decide to upgrade to {{site.data.keyword.apiconnect_short}}, you'll need 
 
 4. Select **Definition** in the navigation.
 
-5. Select **API definition file** > **Open in API Connect** > **Continue** in the *API definition file* section. If you already have an existing {{site.data.keyword.apiconnect_short}} service, then it automatically migrates the API to the existing service. If you do not already have an {{site.data.keyword.apiconnect_short}} service configured, it automatically adds the service with a free Lite plan and migrates the API. If your instance failed to provision, complete the steps in [Manually migrating APIs to {{site.data.keyword.apiconnect_short}}](#man_migrate_api) to manually migrate it to the new service. 
+5. Select **API definition file** > **Open in API Connect** > **Continue** in the *API definition file* section. If you already have an existing {{site.data.keyword.apiconnect_short}} service, then it automatically migrates the API to the existing service. If you do not already have an {{site.data.keyword.apiconnect_short}} service configured, it automatically adds the service with a free Lite plan and migrates the API. If your instance failed to provision, complete the steps in [Manually migrating APIs to {{site.data.keyword.apiconnect_short}}](#man_migrate_api_upgrade) to manually migrate it to the new service. 
 
 6. Before closing the screen of the original API, disable the slider for **Expose Managed API** . This prevents anyone from acting on the endpoint of the old version.
 
 ### Cloud Foundry API
+{: #cloud_foundry_api_upgrade}
 
 1. Open your existing Cloud Foundry API source in the {{site.data.keyword.Bluemix_notm}} Dashboard. 
 
@@ -53,7 +55,7 @@ If you decide to upgrade to {{site.data.keyword.apiconnect_short}}, you'll need 
 
 3. Select **Definition** in the navigation.
 
-4. Select **API definition file** > **Open in API Connect** > **Continue**. If you already have an existing {{site.data.keyword.apiconnect_short}} service, then it automatically migrates the API to the existing service. If you do not already have an {{site.data.keyword.apiconnect_short}} service configured, it automatically adds the service with a free Lite plan and migrates the API. If your instance failed to provision, complete the steps in [Manually migrating APIs to {{site.data.keyword.apiconnect_short}}](#man_migrate_api) to manually migrate it to the new service.
+4. Select **API definition file** > **Open in API Connect** > **Continue**. If you already have an existing {{site.data.keyword.apiconnect_short}} service, then it automatically migrates the API to the existing service. If you do not already have an {{site.data.keyword.apiconnect_short}} service configured, it automatically adds the service with a free Lite plan and migrates the API. If your instance failed to provision, complete the steps in [Manually migrating APIs to {{site.data.keyword.apiconnect_short}}](#man_migrate_api_upgrade) to manually migrate it to the new service.
    
 5. After the content has been migrated to the {{site.data.keyword.apiconnect_short}} instance, select the link that is provided to access the migrated version.
     **Important:** To prevent issues with multiple instances of the API running, make sure that you disable the *Manage the API* slider in the original version of the API.
@@ -63,7 +65,7 @@ If you decide to upgrade to {{site.data.keyword.apiconnect_short}}, you'll need 
 7. Select **Drafts** to view your new API.
 
 ## Manually migrating APIs to {{site.data.keyword.apiconnect_short}}
-{: #man_migrate_api}
+{: #man_migrate_api_upgrade}
 
 If the process to migrate your API to the {{site.data.keyword.apiconnect_short}} service did not finish correctly, complete the following steps to manually migrate it:
 
@@ -98,6 +100,7 @@ If the process to migrate your API to the {{site.data.keyword.apiconnect_short}}
 Your API is available in the {{site.data.keyword.apiconnect_short}} service instance. 
 
 ## Publish the API
+{: #publish_api_upgrade}
 
 You can continue to publish the API by completing the following steps:
 
@@ -117,4 +120,3 @@ You can continue to publish the API by completing the following steps:
 	3. Add the endpoint, if it is not already specified.
 	
  After you migrate your APIs, you can access all of the API management features by opening the {{site.data.keyword.apiconnect_short}} service tile and through the {{site.data.keyword.Bluemix_notm}} Dashboard. 
-

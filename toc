@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="api-management" audience="platform" href="/docs/api-management/index.html" path="/api-management"}
+{: .toc subcollection="api-management" service="API management" audience="platform" href="/docs/services/api-management/getting-started.html" path="services/api-management"}
 API management
 
     {: .navgroup id="learn"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-10-08"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-10-08"
 # Manage APIs
 {: #manage_apis}
 
-After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Creating APIs from {{site.data.keyword.openwhisk_short}} actions](manage_openwhisk_apis.html) or [Enabling API managed endpoints](manage_cf_apis.html). 
+After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Create APIs from {{site.data.keyword.openwhisk_short}} actions](/docs/services/api-management/manage_openwhisk_apis.html) or [Enable API managed endpoints](/docs/services/api-management/manage_cf_apis.html). 
 
 To manage the settings for your API, complete the following steps:
 
@@ -32,7 +32,7 @@ If you created a new API, and it is already opened in the interface, you can ski
 4. Select the Expose Managed API slider to activate it and expose your API. Note: Some of the settings cannot be set when the API is not exposed.  
 
 ## Summary of settings for APIs
-{: #overview_api}
+{: #overview_api_manage_apis}
 
 The Summary tab is selected by default when you select an API, and is split into two sections:
 * Properties - In the Properties section you can view the following information:
@@ -60,7 +60,7 @@ The Response Log table contains individual details of the last 100 responses. Yo
 
 
 ## Editing API settings
-{: #settings_api}
+{: #settings_api_manage_apis}
 
 In the **Definition** tab, you can update basic information about your API. This information includes the documentation, name, and base URL. Use the Security and Rate Limiting section to specify a call and interval limit to ensure that only a certain amount of calls are made per second, minute, or hour. You can also require authentication to create API calls to prevent unwanted use of your data or to gather statistics about the API.
 
@@ -71,7 +71,7 @@ To change the settings for an API, complete the following steps:
 3. In the Security and Rate Limiting section, you can update the following policies:
     * Require API key - Specifies whether the API call can only be processed when the correct API key is provided. The default setting does not require an additional key.
     * Security method - When the API key option is selected, specifies whether processing the API only requires the API key, or requires both the API key and the API secret.
-    * Location of the API key and secret - Depending on your setting for the method, specifies how your API security information is included in the call. The Invocation names specify how the security information is identified. For more information about working with keys and secrets, see [Manage keys and secrets](keys_secrets.html).
+    * Location of the API key and secret - Depending on your setting for the method, specifies how your API security information is included in the call. The Invocation names specify how the security information is identified. For more information about working with keys and secrets, see [Manage keys and secrets](/docs/services/api-management/keys_secrets.html).
     * Limit API call rate - Sets the number of API calls that are allowed during a specified time interval, with the option of setting it for each key. Note that a burst-type of rate-limiting method is used. The average rate of the API calls is calculated across the total time interval that you specified in the rate. If the rate of API calls during an interval exceeds the average rate of the API calls, there could be a period of denied calls up to the time limit that you specified in the rate.   
     * OAuth provider - Ensures that users with the correct security parameters can access your APIs by enforcing OAuth through social login credentials of providers like Google, Facebook, IBM App ID, and GitHub.
 	    **Note:** You must specify an existing App ID service instance that is configured in {{site.data.keyword.Bluemix_notm}} to provide the identification data when you use **App ID** as your OAuth provider. If you do not have an existing App ID service, you can select **Create** in the OAuth section to create one in a new window and return to specify it for API management. You can also select **Edit** to change a selected service instance.
@@ -79,7 +79,7 @@ To change the settings for an API, complete the following steps:
 5. Click **Save**.
 
 ## Sharing APIs
-{: #share_api}
+{: #share_api_manage_apis}
 
 You can share APIs with other users inside or outside your {{site.data.keyword.Bluemix_notm}} organization. 
 
@@ -114,10 +114,10 @@ In the Sharing Outside of {{site.data.keyword.Bluemix_notm}} Organization sectio
   
 The API documentation link opens the API in the **API Explorer** tab.
 
-For more information about working with keys and secrets, see [Manage keys and secrets](keys_secrets.html).
+For more information about working with keys and secrets, see [Manage keys and secrets](/docs/services/api-management/keys_secrets.html).
 
 ## Viewing and testing with API Explorer
-{: #explore_api}
+{: #explore_api_manage_apis}
 
 Select the API Explorer tab to view generated html from your Swagger doc. 
 
@@ -132,11 +132,11 @@ To test the API, complete the following steps:
 The response to the request is displayed. 
 
 ## Custom domains
-{: #custom_domains}
+{: #custom_domains_manage_apis}
 
 In some instances, you might want a custom or "vanity" domain instead of the API gateway's default domain. The API management capability supports fronting APIs with a domain name of your choosing.
 
-Complete the following steps to initially set up the custom domain. If you previously completed the steps to set up the domain, see [Using a custom domain with your APIs](manage_apis.html#custom_domains_bind).
+Complete the following steps to initially set up the custom domain. If you previously completed the steps to set up the domain, see [Using a custom domain with your APIs](#custom_domains_bind_manage_apis).
 
 Custom domains are not isolated to a single API, but are scoped to a group of APIs defined by:
 - Originating {{site.data.keyword.Bluemix_notm}} service (for example, {{site.data.keyword.openwhisk_short}})
@@ -145,17 +145,19 @@ Custom domains are not isolated to a single API, but are scoped to a group of AP
 For example, a custom domain would be scoped to all {{site.data.keyword.openwhisk_short}} APIs created in the "dev" Cloud Foundry space.
 
 ### Setup
+{: #setup_manage_apis}
 
 To get started, create a new API in an {{site.data.keyword.Bluemix_notm}} service that supports the integrated API Management feature, or create an API Proxy by using the {{site.data.keyword.Bluemix_notm}} APIs console.
 
 #### Prepare certificates
+{: #prep_certs_manage_apis}
 
-In order to register a custom domain, you must provide valid TLS certificates during setup. Use the [Certificate Manager](../services/certificate-manager) service to upload a certificate and a private key.
+In order to register a custom domain, you must provide valid TLS certificates during setup. Use the [Certificate Manager](/docs/services/certificate-manager) service to upload a certificate and a private key.
 
 *Note: API invocations are only available by using TLS (port 443). Plain HTTP is not supported.*
 
 ### Using a custom domain with your APIs
-{: #custom_domains_bind}
+{: #custom_domains_bind_manage_apis}
 
 After the initial setup is complete, bind one or more APIs to the registered domain from the **Custom domains** section of the {{site.data.keyword.Bluemix_notm}} APIs console by completing the following steps:
 
@@ -172,4 +174,4 @@ After the initial setup is complete, bind one or more APIs to the registered dom
 8. Click **Save**. The specified domain name should appear in the row next to the default domain, indicating that it was successfully applied.
 9. Finally, return to your DNS provider's settings and create a CNAME record pointing your custom domain (e.g. *api.mycompany.com*) to the **Default domain / Alias**. This will cause traffic through your custom domain to be routed to your backend API.
 
-*Note: Before the custom domain is applied, the DNS pointer is verified by ensuring that the custom domain TXT record contains the default domain alias that is associated with the APIs. If the DNS setup is not complete or the DNS changes from Step 2 haven't finished propagating, an error appears and the domain settings won't be saved. If this occurs, try again periodically up to 48 hours after changing the DNS settings. If the error persists beyond 48 hours, verify your DNS settings or contact {{site.data.keyword.Bluemix_notm}} support.*
+Note: Before the custom domain is applied, the DNS pointer is verified by ensuring that the custom domain TXT record contains the default domain alias that is associated with the APIs. If the DNS setup is not complete or the DNS changes from Step 2 haven't finished propagating, an error appears and the domain settings won't be saved. If this occurs, try again periodically up to 48 hours after changing the DNS settings. If the error persists beyond 48 hours, verify your DNS settings or contact {{site.data.keyword.Bluemix_notm}} support.

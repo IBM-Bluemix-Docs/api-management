@@ -36,7 +36,7 @@ To create an {{site.data.keyword.openwhisk_short}} API, complete the following s
 		* PATCH
 		* POST
 		* PUT
-	* Package containing action - The packages that are already available in your organization that might have the action that you want to use for this API. See [Using and creating Cloud Functions packages](../openwhisk/openwhisk_packages.html) for more information about this field.
+	* Package containing action - The packages that are already available in your organization that might have the action that you want to use for this API. See [Using and creating Cloud Functions packages](/docs/services/openwhisk/openwhisk_packages.html) for more information about this field.
 	* Actions - **Actions that are available in {{site.data.keyword.Bluemix_notm}}** is the only option that is available.
 	* Response content type - This identifies the format in which the API returns the information. You can select from the following formats:
 	    * application/json - This is the default format, and is the most often used.
@@ -48,4 +48,4 @@ To create an {{site.data.keyword.openwhisk_short}} API, complete the following s
 5. Select **Create** to create the operation. The Operation is added to the Operations that invoke {{site.data.keyword.openwhisk_short}} actions table.
 5. Complete the remaining information that you want to complete. You can also add or update the remaining information later when you manage your APIs.
 6. Click **Save**. The API management overview page for your API opens and all the information that you just defined is displayed.
-7. Continue managing your API with [Manage APIs](manage_apis.html).
+7. Continue managing your API with [Manage APIs](/docs/services/api-management/manage_apis.html).
