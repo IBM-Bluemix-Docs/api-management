@@ -51,7 +51,7 @@ API management uses the {{site.data.keyword.Bluemix_notm}} logging and metrics s
 ## Rate limiting by subscription (API key)
 {: #rate_limit_index notoc}
 
-You can enforce a rate limit to manage the number of calls that applications can make to your APIs. You can specify a rate limit so that only a permitted number of calls are made per second, minute, hour, so that for instance, your backend is not overloaded. You can set this rate to apply to the overall API, or set a single limit for the API that applies to each API key individually. For more information about keys and secrets, see [Editing API settings](/docs/services/api-management?topic=manage_apis#settings_apis_manage_apis).
+You can enforce a rate limit to manage the number of calls that applications can make to your APIs. You can specify a rate limit so that only a permitted number of calls are made per second, minute, hour, so that for instance, your backend is not overloaded. You can set this rate to apply to the overall API, or set a single limit for the API that applies to each API key individually. For more information about keys and secrets, see [Editing API settings](/docs/services/api-management?topic=api-management-manage_apis#settings_apis_manage_apis).
 
 ## OAuth
 {: #oauth_index notoc}
@@ -66,6 +66,6 @@ CORS allows embedded scripts in a web page to call the API across domain boundar
 ## Additional API management options
 {: #add_mgt_options_index notoc}
 
-These features for API management are available in the API Management tab of your Cloud Foundry, {{site.data.keyword.openwhisk_short}}, or App Connect Dashboard. For more complex management solutions, you can upgrade to the full {{site.data.keyword.apiconnect_full}} service to access more features such as detailed analytics, packaging strategies for your APIs, or a developer portal to socialize APIs. See [Getting started with API Connect](/docs/services/apiconnect?topic=index) for more information about the {{site.data.keyword.apiconnect_full}} service.
+These features for API management are available in the API Management tab of your Cloud Foundry, {{site.data.keyword.openwhisk_short}}, or App Connect Dashboard. For more complex management solutions, you can upgrade to the full {{site.data.keyword.apiconnect_full}} service to access more features such as detailed analytics, packaging strategies for your APIs, or a developer portal to socialize APIs. See [Getting started with API Connect](/docs/services/apiconnect?topic=apiconnect-index) for more information about the {{site.data.keyword.apiconnect_full}} service.
 
-For more information about upgrading your APIs that you are managing in {{site.data.keyword.Bluemix_notm}} to the {{site.data.keyword.apiconnect_short}} service, see [Accessing more API management features](/docs/services/api-management?topic=upgrade).
+For more information about upgrading your APIs that you are managing in {{site.data.keyword.Bluemix_notm}} to the {{site.data.keyword.apiconnect_short}} service, see [Accessing more API management features](/docs/services/api-management?topic=api-management-upgrade).

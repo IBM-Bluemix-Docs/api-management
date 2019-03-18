@@ -21,7 +21,7 @@ subcollection: api-management
 # Manage APIs
 {: #manage_apis}
 
-After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Create APIs from {{site.data.keyword.openwhisk_short}} actions](/docs/services/api-management?topic=manage_openwhisk_apis) or [Enable API managed endpoints](/docs/services/api-management?topic=manage_cf_apis). 
+After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Create APIs from {{site.data.keyword.openwhisk_short}} actions](/docs/services/api-management?topic=api-management-manage_openwhisk_apis) or [Enable API managed endpoints](/docs/services/api-management?topic=api-management-manage_cf_apis). 
 
 To manage the settings for your API, complete the following steps:
 
@@ -76,7 +76,7 @@ To change the settings for an API, complete the following steps:
 3. In the Security and Rate Limiting section, you can update the following policies:
     * Require API key - Specifies whether the API call can only be processed when the correct API key is provided. The default setting does not require an additional key.
     * Security method - When the API key option is selected, specifies whether processing the API only requires the API key, or requires both the API key and the API secret.
-    * Location of the API key and secret - Depending on your setting for the method, specifies how your API security information is included in the call. The Invocation names specify how the security information is identified. For more information about working with keys and secrets, see [Manage keys and secrets](/docs/services/api-management?topic=keys_secrets).
+    * Location of the API key and secret - Depending on your setting for the method, specifies how your API security information is included in the call. The Invocation names specify how the security information is identified. For more information about working with keys and secrets, see [Manage keys and secrets](/docs/services/api-management?topic=api-management-keys_secrets).
     * Limit API call rate - Sets the number of API calls that are allowed during a specified time interval, with the option of setting it for each key. Note that a burst-type of rate-limiting method is used. The average rate of the API calls is calculated across the total time interval that you specified in the rate. If the rate of API calls during an interval exceeds the average rate of the API calls, there could be a period of denied calls up to the time limit that you specified in the rate.   
     * OAuth provider - Ensures that users with the correct security parameters can access your APIs by enforcing OAuth through social login credentials of providers like Google, Facebook, IBM App ID, and GitHub.
 	    **Note:** You must specify an existing App ID service instance that is configured in {{site.data.keyword.Bluemix_notm}} to provide the identification data when you use **App ID** as your OAuth provider. If you do not have an existing App ID service, you can select **Create** in the OAuth section to create one in a new window and return to specify it for API management. You can also select **Edit** to change a selected service instance.
@@ -119,7 +119,7 @@ In the Sharing Outside of {{site.data.keyword.Bluemix_notm}} Organization sectio
   
 The API documentation link opens the API in the **API Explorer** tab.
 
-For more information about working with keys and secrets, see [Manage keys and secrets](/docs/services/api-management?topic=keys_secrets).
+For more information about working with keys and secrets, see [Manage keys and secrets](/docs/services/api-management?topic=api-management-keys_secrets).
 
 ## Viewing and testing with API Explorer
 {: #explore_api_manage_apis}
