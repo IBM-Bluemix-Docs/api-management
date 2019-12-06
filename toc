@@ -5,8 +5,8 @@
 API management
 
     {: .navgroup id="learn"}
-    index.md
-	managed_apis.md
+    getting-started.md
+    managed_apis.md
     upgrade.md
     {: .navgroup-end}
 
